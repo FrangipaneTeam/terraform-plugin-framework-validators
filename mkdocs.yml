@@ -23,6 +23,11 @@ nav:
   - Getting Started: "getting-started.md"
   - Validators:
       - String: "stringvalidator/index.md"
+      - Bool: "boolvalidator/index.md"
+      - Int64: "int64validator/index.md"
+      - List: "listvalidator/index.md"
+      - Set: "setvalidator/index.md"
+      - Map: "mapvalidator/index.md"
 
 plugins:
   - search
