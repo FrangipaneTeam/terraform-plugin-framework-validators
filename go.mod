@@ -2,7 +2,10 @@ module github.com/FrangipaneTeam/terraform-plugin-framework-validators
 
 go 1.20
 
-require github.com/hashicorp/terraform-plugin-framework v1.1.1
+require (
+	github.com/google/uuid v1.3.0
+	github.com/hashicorp/terraform-plugin-framework v1.1.1
+)
 
 require (
 	github.com/fatih/color v1.13.0 // indirect
@@ -13,6 +16,7 @@ require (
 	github.com/mattn/go-colorable v0.1.12 // indirect
 	github.com/mattn/go-isatty v0.0.14 // indirect
 	github.com/mitchellh/go-testing-interface v1.14.1 // indirect
+	github.com/satori/go.uuid v1.2.0 // indirect
 	github.com/vmihailenco/msgpack/v4 v4.3.12 // indirect
 	github.com/vmihailenco/tagparser v0.1.2 // indirect
 	golang.org/x/net v0.0.0-20220722155237-a158d28d115b // indirect
