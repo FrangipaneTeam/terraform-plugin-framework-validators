@@ -4,9 +4,10 @@ import (
 	"context"
 	"testing"
 
-	"github.com/FrangipaneTeam/terraform-plugin-framework-validators/stringvalidator"
 	"github.com/hashicorp/terraform-plugin-framework/schema/validator"
 	"github.com/hashicorp/terraform-plugin-framework/types"
+
+	"github.com/FrangipaneTeam/terraform-plugin-framework-validators/stringvalidator"
 )
 
 func TestValidNetmaskValidator(t *testing.T) {

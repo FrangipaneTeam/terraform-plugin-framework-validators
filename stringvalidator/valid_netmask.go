@@ -10,8 +10,7 @@ import (
 
 var _ validator.String = netmaskValidator{}
 
-type netmaskValidator struct {
-}
+type netmaskValidator struct{}
 
 // Description describes the validation in plain text formatting.
 func (validator netmaskValidator) Description(_ context.Context) string {
@@ -33,7 +32,7 @@ func (validator netmaskValidator) ValidateString(
 		return
 	}
 
-	var re = regexp.MustCompile(`(?m)^(((255\.){3}(255|254|252|248|240|224|192|128|0+))|((255\.){2}(255|254|252|248|240|224|192|128|0+)\.0)|((255\.)(255|254|252|248|240|224|192|128|0+)(\.0+){2})|((255|254|252|248|240|224|192|128|0+)(\.0+){3}))$`)
+	re := regexp.MustCompile(`(?m)^(((255\.){3}(255|254|252|248|240|224|192|128|0+))|((255\.){2}(255|254|252|248|240|224|192|128|0+)\.0)|((255\.)(255|254|252|248|240|224|192|128|0+)(\.0+){2})|((255|254|252|248|240|224|192|128|0+)(\.0+){3}))$`)
 
 	if !re.MatchString(request.ConfigValue.ValueString()) {
 		response.Diagnostics.AddAttributeError(
@@ -42,7 +41,6 @@ func (validator netmaskValidator) ValidateString(
 			fmt.Sprintf("invalid value: %s", request.ConfigValue.String()),
 		)
 	}
-
 }
 
 // IsValidNetmask returns a validator which ensures that the configured attribute
