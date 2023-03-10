@@ -9,3 +9,5 @@ This repository contains a collections of validators for the Terraform Plugin Fr
 - [BoolValidator](boolvalidator/index.md)
 - [Int64Validator](int64validator/index.md)
 - [ListValidator](listvalidator/index.md)
+- [SetValidator](setvalidator/index.md)
+- [MapValidator](mapvalidator/index.md)

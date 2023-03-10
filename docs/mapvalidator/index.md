@@ -1,13 +1,13 @@
-# MapValidator
+# SetValidator
 
-Map validator are used to validate the plan of a map attribute.
-I will be used into the `Validators` field of the `schema.MapAttribute` struct.
+Set validator are used to validate the plan of a set attribute.
+I will be used into the `Validators` field of the `schema.SetAttribute` struct.
 
 ## How to use it
 
 ```go
 import (
-    fmapvalidator "github.com/FrangipaneTeam/terraform-plugin-framework-validators/mapvalidator"
+    fsetvalidator "github.com/FrangipaneTeam/terraform-plugin-framework-validators/setvalidator"
 )
 ```
 
