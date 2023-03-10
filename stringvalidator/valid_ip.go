@@ -10,8 +10,7 @@ import (
 
 var _ validator.String = netIPValidator{}
 
-type netIPValidator struct {
-}
+type netIPValidator struct{}
 
 // Description describes the validation in plain text formatting.
 func (validator netIPValidator) Description(_ context.Context) string {

@@ -17,3 +17,7 @@ import (
 
 - [`IsValidIP`](isvalidip.md) - This validator is used to check if the string is a valid IP address.
 - [`IsValidNetmask`](isvalidnetmask.md) - This validator is used to check if the string is a valid netmask.
+
+## String
+
+- [`IsValidURN`](isvalidurn.md) - This validator is used to check if the string is a valid URN.
