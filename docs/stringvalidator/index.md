@@ -21,3 +21,4 @@ import (
 ## String
 
 - [`IsValidURN`](isvalidurn.md) - This validator is used to check if the string is a valid URN.
+- [`IsValidUUID`](isvaliduuid.md) - This validator is used to check if the string is a valid UUID.
