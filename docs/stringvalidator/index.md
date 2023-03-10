@@ -1,4 +1,4 @@
-# StringPlanModifiers
+# StringValidator
 
 String validator are used to validate the plan of a string attribute.
 I will be used into the `Validators` field of the `schema.StringAttribute` struct.
@@ -22,3 +22,7 @@ import (
 
 - [`IsValidURN`](isvalidurn.md) - This validator is used to check if the string is a valid URN.
 - [`IsValidUUID`](isvaliduuid.md) - This validator is used to check if the string is a valid UUID.
+
+## Special
+
+- [`Not`](not.md) - This validator is used to negate the result of another validator.
