@@ -3,7 +3,7 @@ package stringvalidator
 import (
 	"github.com/hashicorp/terraform-plugin-framework/schema/validator"
 
-	"github.com/FrangipaneTeam/terraform-plugin-framework-validators/docs/stringvalidator/common"
+	"github.com/FrangipaneTeam/terraform-plugin-framework-validators/stringvalidator/common"
 )
 
 // IsValidNetmask returns a validator which ensures that the configured attribute
