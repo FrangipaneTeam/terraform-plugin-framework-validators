@@ -6,3 +6,5 @@ This repository contains a collections of validators for the Terraform Plugin Fr
 ## Validators
 
 - [StringValidator](stringvalidator/index.md)
+- [BoolValidator](boolvalidator/index.md)
+- [Int64Validator](int64validator/index.md)
