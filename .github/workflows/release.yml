@@ -9,7 +9,7 @@ jobs:
   release_please:
     name: Release Please
     runs-on: ubuntu-22.04
-    if: github.repository == 'FrangipaneTeam/terraform-plugin-framework-planmodifiers'
+    if: github.repository == 'FrangipaneTeam/terraform-plugin-framework-validators'
     steps:
       - uses: google-github-actions/release-please-action@v3
         id: release
