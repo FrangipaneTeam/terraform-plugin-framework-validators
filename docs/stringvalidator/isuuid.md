@@ -1,7 +1,6 @@
-# `IsValidUUID`
+# `IsUUID`
 
-!!! danger inline end "Deprecated"
-    Use [IsUUID](./isuuid.md) instead.
+!!! quote inline end "Released in v1.1.0"
 
 This validator is used to check if the string is a valid (v4) UUID.
 

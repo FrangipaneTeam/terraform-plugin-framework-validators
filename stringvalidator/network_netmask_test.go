@@ -10,7 +10,7 @@ import (
 	"github.com/FrangipaneTeam/terraform-plugin-framework-validators/stringvalidator"
 )
 
-func TestValidURNValidator(t *testing.T) {
+func TestValidNetmaskValidator(t *testing.T) {
 	t.Parallel()
 
 	type testCase struct {
@@ -25,10 +25,10 @@ func TestValidURNValidator(t *testing.T) {
 			val: types.StringNull(),
 		},
 		"valid": {
-			val: types.StringValue("urn:test:demo:4aeb40d8-038c-4e77-8181-a7054f583b12"),
+			val: types.StringValue("255.255.255.0"),
 		},
 		"invalid": {
-			val:         types.StringValue("4aeb40d8-038c-4e77-8181-a7054f583b12"),
+			val:         types.StringValue("254.255.255.0"),
 			expectError: true,
 		},
 		"multiple byte characters": {
@@ -46,7 +46,7 @@ func TestValidURNValidator(t *testing.T) {
 				ConfigValue: test.val,
 			}
 			response := validator.StringResponse{}
-			stringvalidator.IsValidURN().ValidateString(context.TODO(), request, &response)
+			stringvalidator.IsNetmask().ValidateString(context.TODO(), request, &response)
 
 			if !response.Diagnostics.HasError() && test.expectError {
 				t.Fatal("expected error, got no error")

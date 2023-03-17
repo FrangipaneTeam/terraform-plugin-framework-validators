@@ -1,9 +1,8 @@
-# `IsValidUUID`
+# `IsURN`
 
-!!! danger inline end "Deprecated"
-    Use [IsUUID](./isuuid.md) instead.
+!!! quote inline end "Released in v1.1.0"
 
-This validator is used to check if the string is a valid (v4) UUID.
+This validator is used to check if the string is a valid URN.
 
 ## How to use it
 
@@ -16,7 +15,7 @@ func (r *xResource) Schema(ctx context.Context, _ resource.SchemaRequest, resp *
                 Optional:            true,
                 MarkdownDescription: "The VM ID for ...",
                 Validators: []validator.String{
-                    fstringvalidator.IsValidUUID()
+                    fstringvalidator.IsValidURN()
                 },
             },
 ```

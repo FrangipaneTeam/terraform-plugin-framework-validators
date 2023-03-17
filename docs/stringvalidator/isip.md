@@ -1,9 +1,8 @@
-# `IsValidUUID`
+# `IsIP`
 
-!!! danger inline end "Deprecated"
-    Use [IsUUID](./isuuid.md) instead.
+!!! quote inline end "Released in v1.1.0"
 
-This validator is used to check if the string is a valid (v4) UUID.
+This validator is used to check if the string is a valid IP address.
 
 ## How to use it
 
@@ -12,11 +11,11 @@ This validator is used to check if the string is a valid (v4) UUID.
 func (r *xResource) Schema(ctx context.Context, _ resource.SchemaRequest, resp *resource.SchemaResponse) {
     resp.Schema = schema.Schema{
         (...)
-            "vm_id": schema.StringAttribute{
+            "ip_address": schema.StringAttribute{
                 Optional:            true,
-                MarkdownDescription: "The VM ID for ...",
+                MarkdownDescription: "IPV4 for ...",
                 Validators: []validator.String{
-                    fstringvalidator.IsValidUUID()
+                    fstringvalidator.IsIP()
                 },
             },
 ```

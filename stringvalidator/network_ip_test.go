@@ -10,7 +10,7 @@ import (
 	"github.com/FrangipaneTeam/terraform-plugin-framework-validators/stringvalidator"
 )
 
-func TestValidUUIDValidator(t *testing.T) {
+func TestValidIPValidator(t *testing.T) {
 	t.Parallel()
 
 	type testCase struct {
@@ -25,14 +25,10 @@ func TestValidUUIDValidator(t *testing.T) {
 			val: types.StringNull(),
 		},
 		"valid": {
-			val: types.StringValue("4aeb40d8-038c-4e77-8181-a7054f583b12"),
+			val: types.StringValue("192.168.1.1"),
 		},
-		"invalid string": {
-			val:         types.StringValue("urn:test:demo:4aeb40d8-038c-4e77-8181-a7054f583b12"),
-			expectError: true,
-		},
-		"invalid uuid": {
-			val:         types.StringValue("4aeb40d8-038c-4e77-8181-a7054f583b"),
+		"invalid": {
+			val:         types.StringValue("192.168.1"),
 			expectError: true,
 		},
 		"multiple byte characters": {
@@ -50,7 +46,7 @@ func TestValidUUIDValidator(t *testing.T) {
 				ConfigValue: test.val,
 			}
 			response := validator.StringResponse{}
-			stringvalidator.IsValidUUID().ValidateString(context.TODO(), request, &response)
+			stringvalidator.IsIP().ValidateString(context.TODO(), request, &response)
 
 			if !response.Diagnostics.HasError() && test.expectError {
 				t.Fatal("expected error, got no error")

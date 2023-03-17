@@ -1,6 +1,7 @@
 # `IsValidNetmask`
 
-!!! quote inline end "Released in v1.0.0"
+!!! danger inline end "Deprecated"
+    Use [IsNetmask](./isnetmask.md) instead.
 
 This validator is used to check if the string is a valid netmask.
 

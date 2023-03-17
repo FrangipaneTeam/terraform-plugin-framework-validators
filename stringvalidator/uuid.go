@@ -6,9 +6,15 @@ import (
 	"github.com/FrangipaneTeam/terraform-plugin-framework-validators/stringvalidator/common"
 )
 
-// IsValidUUID returns a validator which ensures that the configured attribute
-// value is a valid (v4) UUID.
-// Null (unconfigured) and unknown (known after apply) values are skipped.
+/*
+IsValidUUID
+returns a validator which ensures that the configured attribute
+value is a valid (v4) UUID.
+
+Null (unconfigured) and unknown (known after apply) values are skipped.
+
+Deprecated: Use IsUUID() instead.
+*/
 func IsValidUUID() validator.String {
 	return &common.RegexValidator{
 		Desc:         "must be a valid UUID",
@@ -16,4 +22,15 @@ func IsValidUUID() validator.String {
 		ErrorSummary: "Failed to parse UUID",
 		ErrorDetail:  "This value is not a valid (v4) UUID",
 	}
+}
+
+/*
+IsUUID
+returns a validator which ensures that the configured attribute
+value is a valid (v4) UUID.
+
+Null (unconfigured) and unknown (known after apply) values are skipped.
+*/
+func IsUUID() validator.String {
+	return IsValidUUID()
 }
