@@ -1,7 +1,7 @@
 # BoolValidator
 
 Bool validator are used to validate the plan of a boolean attribute.
-I will be used into the `Validators` field of the `schema.BoolAttribute` struct.
+It will be used into the `Validators` field of the `schema.BoolAttribute` struct.
 
 ## How to use it
 
