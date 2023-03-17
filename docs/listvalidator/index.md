@@ -13,6 +13,8 @@ import (
 
 ## List of Validators
 
+- [`IsURN`](isurn.md) - This validator is used to check if the list attribute contains valid URNs.
+
 ## Special
 
 - [`Not`](not.md) - This validator is used to negate the result of another validator.
