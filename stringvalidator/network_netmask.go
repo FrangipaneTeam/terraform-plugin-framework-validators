@@ -6,9 +6,16 @@ import (
 	"github.com/FrangipaneTeam/terraform-plugin-framework-validators/stringvalidator/common"
 )
 
-// IsValidNetmask returns a validator which ensures that the configured attribute
-// value is a valid Netmask.
-// Null (unconfigured) and unknown (known after apply) values are skipped.
+/*
+IsValidNetmask
+
+returns a validator which ensures that the configured attribute
+value is a valid Netmask.
+
+Null (unconfigured) and unknown (known after apply) values are skipped.
+
+	DEPRECATED: Use IsNetmask() instead.
+*/
 func IsValidNetmask() validator.String {
 	return &common.RegexValidator{
 		Desc:         "must be a valid netmask",
@@ -16,4 +23,16 @@ func IsValidNetmask() validator.String {
 		ErrorSummary: "Failed to parse netmask",
 		ErrorDetail:  "This value is not a valid netmask",
 	}
+}
+
+/*
+IsNetmask
+
+returns a validator which ensures that the configured attribute
+value is a valid Netmask.
+
+Null (unconfigured) and unknown (known after apply) values are skipped.
+*/
+func IsNetmask() validator.String {
+	return IsValidNetmask()
 }

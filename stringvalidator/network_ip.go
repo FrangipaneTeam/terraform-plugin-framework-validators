@@ -41,9 +41,24 @@ func (validator netIPValidator) ValidateString(
 	}
 }
 
-// IsValidIP returns a validator which ensures that the configured attribute
-// value is a valid IP address with net.ParseIP package.
-// Null (unconfigured) and unknown (known after apply) values are skipped.
+/*
+IsValidIP
+returns a validator which ensures that the configured attribute
+value is a valid IP address with net.ParseIP package.
+Null (unconfigured) and unknown (known after apply) values are skipped.
+
+	DEPRECATED: Use IsIP() instead.
+*/
 func IsValidIP() validator.String {
+	return &netIPValidator{}
+}
+
+/*
+IsIP returns a validator which ensures that the configured attribute
+value is a valid IP address with net.ParseIP package.
+
+Null (unconfigured) and unknown (known after apply) values are skipped.
+*/
+func IsIP() validator.String {
 	return &netIPValidator{}
 }

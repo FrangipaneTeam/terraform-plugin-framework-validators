@@ -1,6 +1,7 @@
 # `IsValidURN`
 
-!!! quote inline end "Released in v1.0.0"
+!!! danger inline end "Deprecated"
+    Use [IsURN](./isurn.md) instead.
 
 This validator is used to check if the string is a valid URN.
 
