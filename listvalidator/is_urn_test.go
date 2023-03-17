@@ -35,9 +35,9 @@ func TestIsURNValidator(t *testing.T) {
 			),
 			expectedDiagnostics: diag.Diagnostics{
 				diag.NewAttributeErrorDiagnostic(
-					path.Root("test"),
-					"Failed to parse URN",
-					"This value is not a valid URN",
+					path.Root("test").AtListIndex(0),
+					"Failed to parse URN at index 0",
+					"Element at index 0 is null",
 				),
 			},
 		},
@@ -48,9 +48,9 @@ func TestIsURNValidator(t *testing.T) {
 			),
 			expectedDiagnostics: diag.Diagnostics{
 				diag.NewAttributeErrorDiagnostic(
-					path.Root("test"),
-					"Failed to parse URN",
-					"This value is not a valid URN",
+					path.Root("test").AtListIndex(0),
+					"Failed to parse URN at index 0",
+					`This value is not a valid URN : "4aeb40d8-038c-4e77-8181-a7054f583b12"`,
 				),
 			},
 		},
@@ -64,13 +64,13 @@ func TestIsURNValidator(t *testing.T) {
 		"with-invalid-urn": {
 			list: types.ListValueMust(
 				types.StringType,
-				[]attr.Value{types.StringValue("4aeb40d8-038c-4e77-8181-a7054f583b12"), types.StringValue("urn:test:demo:4aeb40d8-038c-4e77-8181-a7054f583b12")},
+				[]attr.Value{types.StringValue("urn:test:demo:4aeb40d8-038c-4e77-8181-a7054f583b12"), types.StringValue("4aeb40d8-038c-4e77-8181-a7054f583b12")},
 			),
 			expectedDiagnostics: diag.Diagnostics{
 				diag.NewAttributeErrorDiagnostic(
-					path.Root("test"),
-					"Failed to parse URN",
-					"This value is not a valid URN",
+					path.Root("test").AtListIndex(1),
+					"Failed to parse URN at index 1",
+					`This value is not a valid URN : "4aeb40d8-038c-4e77-8181-a7054f583b12"`,
 				),
 			},
 		},

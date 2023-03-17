@@ -2,6 +2,7 @@ package common
 
 import (
 	"context"
+	"fmt"
 	"regexp"
 
 	"github.com/hashicorp/terraform-plugin-framework/schema/validator"
@@ -38,12 +39,21 @@ func (validator RegexValidator) ValidateList(
 	}
 	elems := request.ConfigValue.Elements()
 	re := regexp.MustCompile(validator.Regex)
-	for _, elem := range elems {
+	for i, elem := range elems {
+		if elem.IsNull() {
+			response.Diagnostics.AddAttributeError(
+				request.Path.AtListIndex(i),
+				fmt.Sprintf("%s at index %d", validator.ErrorSummary, i),
+				fmt.Sprintf("Element at index %d is null", i),
+			)
+			continue
+		}
+
 		if !re.MatchString(elem.String()) {
 			response.Diagnostics.AddAttributeError(
-				request.Path,
-				validator.ErrorSummary,
-				validator.ErrorDetail,
+				request.Path.AtListIndex(i),
+				fmt.Sprintf("%s at index %d", validator.ErrorSummary, i),
+				fmt.Sprintf("%s : %s", validator.ErrorDetail, elem.String()),
 			)
 		}
 	}
