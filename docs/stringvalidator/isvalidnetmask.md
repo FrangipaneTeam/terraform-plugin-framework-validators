@@ -1,5 +1,7 @@
 # `IsValidNetmask`
 
+!!! quote inline end "Released in v1.0.0"
+
 This validator is used to check if the string is a valid netmask.
 
 ## How to use it

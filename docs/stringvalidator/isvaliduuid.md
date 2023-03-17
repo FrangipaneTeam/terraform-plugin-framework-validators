@@ -1,5 +1,7 @@
 # `IsValidUUID`
 
+!!! quote inline end "Released in v1.0.0"
+
 This validator is used to check if the string is a valid (v4) UUID.
 
 ## How to use it

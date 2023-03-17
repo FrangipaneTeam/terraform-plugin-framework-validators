@@ -1,5 +1,7 @@
 # `IsValidURN`
 
+!!! quote inline end "Released in v1.0.0"
+
 This validator is used to check if the string is a valid URN.
 
 ## How to use it
