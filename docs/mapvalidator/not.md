@@ -1,5 +1,7 @@
 # `Not`
 
+!!! quote inline end "Released in v1.0.0"
+
 This validator is used to check if the validators passed as arguments are NOT met.
 
 ## How to use it
