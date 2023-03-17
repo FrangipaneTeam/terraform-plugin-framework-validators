@@ -1,7 +1,7 @@
 # ListValidator
 
 List validator are used to validate the plan of a list attribute.
-I will be used into the `Validators` field of the `schema.ListAttribute` struct.
+It will be used into the `Validators` field of the `schema.ListAttribute` struct.
 
 ## How to use it
 

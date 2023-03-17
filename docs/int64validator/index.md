@@ -1,7 +1,7 @@
 # Int64Validator
 
 Int64 validator are used to validate the plan of a int64 attribute.
-I will be used into the `Validators` field of the `schema.Int64Attribute` struct.
+It will be used into the `Validators` field of the `schema.Int64Attribute` struct.
 
 ## How to use it
 

@@ -1,7 +1,7 @@
 # MapValidator
 
 Map validator are used to validate the plan of a map attribute.
-I will be used into the `Validators` field of the `schema.MapAttribute` struct.
+It will be used into the `Validators` field of the `schema.MapAttribute` struct.
 
 ## How to use it
 

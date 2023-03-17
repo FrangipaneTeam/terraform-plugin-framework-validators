@@ -1,7 +1,7 @@
 # StringValidator
 
 String validator are used to validate the plan of a string attribute.
-I will be used into the `Validators` field of the `schema.StringAttribute` struct.
+It will be used into the `Validators` field of the `schema.StringAttribute` struct.
 
 ## How to use it
 
