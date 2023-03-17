@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.1.0](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.0.0...v1.1.0) (2023-03-17)
+
+
+### Features
+
+* add `IsURN` list validator ([#20](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/issues/20)) ([9fbe5d2](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/9fbe5d2121f3f215436c7b48ebdd1c2a765abb12))
+
+
+### Bug Fixes
+
+* better diagnostic for listvalidator isURN ([#26](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/issues/26)) ([49ccf56](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/49ccf5621a36dace5fbd422a061e17d7d60f93d5))
+
+
+### Documentation
+
+* add links to planmodifier and to homepage ([d5ce111](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/d5ce111056f2e25a28b12b7cab717dc70631fdd6))
+* add released on each validators ([3ffd70c](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/3ffd70c69aa8b53f4c99f6380cb4b56241e1fbd5))
+
 ## 1.0.0 (2023-03-13)
 
 
