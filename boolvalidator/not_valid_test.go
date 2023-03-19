@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func TestNotValidator(t *testing.T) {
+func TestNotValidator(_ *testing.T) {
 	// Actually is not possible to test NotValidator because the other validators
 	// use schema validation.
 }
