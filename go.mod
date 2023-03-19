@@ -3,7 +3,6 @@ module github.com/FrangipaneTeam/terraform-plugin-framework-validators
 go 1.20
 
 require (
-	github.com/google/go-cmp v0.5.9
 	github.com/hashicorp/terraform-plugin-framework v1.1.1
 	github.com/hashicorp/terraform-plugin-framework-validators v0.10.0
 )

@@ -24,7 +24,7 @@ func (validator netIPValidator) MarkdownDescription(ctx context.Context) string 
 
 // Validate performs the validation.
 func (validator netIPValidator) ValidateString(
-	ctx context.Context,
+	_ context.Context,
 	request validator.StringRequest,
 	response *validator.StringResponse,
 ) {
