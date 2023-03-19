@@ -27,4 +27,4 @@ go get github.com/FrangipaneTeam/terraform-plugin-framework-validators@latest
 
 ## Documentation
 
-For more information about the validators, please refer to the [documentation](https://frangipaneteam.github.io/terraform-plugin-framework-validators/).
+This repository is maintained by the [Frangipane Team](https://github.com/FrangipaneTeam)
