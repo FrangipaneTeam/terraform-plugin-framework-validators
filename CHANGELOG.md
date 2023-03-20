@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.1](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.1.0...v1.1.1) (2023-03-20)
+
+
+### Miscellaneous
+
+* **docs:** Add docs ValueStringsAre in list/set/map ([033ee2e](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/033ee2e0abce511baca5697fc9c7b4a4bdabc6c4))
+* remove list IsURN validator ([033ee2e](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/033ee2e0abce511baca5697fc9c7b4a4bdabc6c4))
+
 ## [1.1.0](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.0.0...v1.1.0) (2023-03-17)
 
 
