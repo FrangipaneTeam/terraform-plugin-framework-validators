@@ -3,14 +3,10 @@ site_name: Terrafom Framework Validators
 theme:
   name: material
   palette:
-    - scheme: default
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
-    - scheme: slate
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
+    - scheme: orangeCorp
+      # primary: 
+      # accent: orange
+
   features:
     - navigation.sections
     - navigation.top
@@ -18,6 +14,11 @@ theme:
     - header.autohide
   icon:
     repo: fontawesome/brands/github-alt
+  favicon: images/favicon.png
+  logo: images/logo.png
+
+extra_css:
+  - stylesheets/extra.css
 
 nav:
   - Overview: "index.md"
