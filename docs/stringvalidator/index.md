@@ -17,6 +17,7 @@ import (
 
 - [`IsIP`](isip.md) - This validator is used to check if the string is a valid IP address.
 - [`IsNetmask`](isnetmask.md) - This validator is used to check if the string is a valid netmask.
+- [`IsMacAddress`](ismacaddress.md) - This validator is used to check if the string is a valid MAC address.
 
 ## String
 
