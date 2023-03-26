@@ -4,8 +4,6 @@ theme:
   name: material
   palette:
     - scheme: orangeCorp
-      # primary: 
-      # accent: orange
 
   features:
     - navigation.sections
@@ -21,21 +19,13 @@ extra_css:
   - stylesheets/extra.css
 
 nav:
-  - Overview: "index.md"
-  - Getting Started: "getting-started.md"
-  - Validators:
-      - String: "stringvalidator/index.md"
-      - Bool: "boolvalidator/index.md"
-      - Int64: "int64validator/index.md"
-      - List: "listvalidator/index.md"
-      - Set: "setvalidator/index.md"
-      - Map: "mapvalidator/index.md"
-  - FrangipaneTeam:
-      - About: "https://team.frangipane.io/"
-      - GitHub: "https://github.com/FrangipaneTeam"
-  - Other projects:
-      - PlanModifiers: "https://team.frangipane.io/terraform-plugin-framework-planmodifiers/"
-
+  - How to use: "getting-started.md"
+  - String: "stringvalidator/index.md"
+  - Bool: "boolvalidator/index.md"
+  - Int64: "int64validator/index.md"
+  - List: "listvalidator/index.md"
+  - Set: "setvalidator/index.md"
+  - Map: "mapvalidator/index.md"
 
 plugins:
   - search
