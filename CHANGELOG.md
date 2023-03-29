@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.2.1](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.2.0...v1.2.1) (2023-03-29)
+
+
+### Bug Fixes
+
+* Missing documentation for `IsMacAddress` string validator ([#35](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/issues/35)) ([18feb10](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/18feb1039d28915516aa62a1ba0dbf87b9f0bbea))
+
+
+### Documentation
+
+* merge doc to one projet ([08b6356](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/08b635652f5d93f962f73b1af95780342c0a8ce1))
+
+
+### Miscellaneous
+
+* **deps:** bump github.com/hashicorp/terraform-plugin-framework ([4470618](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/447061860b918c64b78ac4f358b9e764cc303289))
+* **docs:** Add docs ValueStringsAre in list/set/map ([10472f7](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/10472f785d1a34c56c83d92936c8cbe6e6752889))
+* **docs:** Add Favicon and branding orange ([d6a7005](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/d6a7005a325fe22a6b34f254b7cdd645d59233cf))
+* remove list IsURN validator ([10472f7](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/10472f785d1a34c56c83d92936c8cbe6e6752889))
+
 ## [1.2.0](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.1.1...v1.2.0) (2023-03-20)
 
 
