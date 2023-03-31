@@ -11,9 +11,9 @@ This validator is used to check if the validators passed as arguments are NOT me
 func (r *xResource) Schema(ctx context.Context, _ resource.SchemaRequest, resp *resource.SchemaResponse) {
     resp.Schema = schema.Schema{
         (...)
-            "enabled": schema.StringAttribute{
+            "ip": schema.StringAttribute{
                 Optional:            true,
-                MarkdownDescription: "Enable ...",
+                MarkdownDescription: "Ip Address ...",
                 Validators: []validator.String{
                     fstringvalidator.Not(fstringvalidator.IsValidIP())
                 },

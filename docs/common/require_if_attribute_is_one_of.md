@@ -18,7 +18,7 @@ func (r *xResource) Schema(ctx context.Context, _ resource.SchemaRequest, resp *
                     fstringvalidator.OneOf("public", "private"),
                 },
             },
-            "enabled": schema.StringAttribute{
+            "enabled": schema.BoolAttribute{
                 Optional:            true,
                 MarkdownDescription: "Enable ...",
                 Validators: []validator.String{

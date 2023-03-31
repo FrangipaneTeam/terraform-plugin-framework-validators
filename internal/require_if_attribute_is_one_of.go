@@ -46,24 +46,24 @@ func (av RequireIfAttributeIsOneOf) Description(_ context.Context) string {
 	var expectedValueDescritpion string
 	for i, expectedValue := range av.ExceptedValues {
 		if i == len(av.ExceptedValues)-1 {
-			expectedValueDescritpion += fmt.Sprintf("\"%q\"", expectedValue)
+			expectedValueDescritpion += fmt.Sprintf("%q", expectedValue)
 			break
 		}
-		expectedValueDescritpion += fmt.Sprintf("\"%q\", ", expectedValue)
+		expectedValueDescritpion += fmt.Sprintf("%q, ", expectedValue)
 	}
-	return fmt.Sprintf("If %q attribute is set and the value is one of %s this attribute is required", av.PathExpression, expectedValueDescritpion)
+	return fmt.Sprintf("If %q attribute is set and the value is one of %s, this attribute is required", av.PathExpression, expectedValueDescritpion)
 }
 
 func (av RequireIfAttributeIsOneOf) MarkdownDescription(_ context.Context) string {
 	var expectedValueDescritpion string
 	for i, expectedValue := range av.ExceptedValues {
 		if i == len(av.ExceptedValues)-1 {
-			expectedValueDescritpion += fmt.Sprintf("`%q`", expectedValue)
+			expectedValueDescritpion += fmt.Sprintf("`%s`", expectedValue)
 			break
 		}
-		expectedValueDescritpion += fmt.Sprintf("`%q`, ", expectedValue)
+		expectedValueDescritpion += fmt.Sprintf("`%s`, ", expectedValue)
 	}
-	return fmt.Sprintf("If %q attribute is set and the value is one of %s this attribute is required", av.PathExpression, expectedValueDescritpion)
+	return fmt.Sprintf("If %q attribute is set and the value is one of %s, this attribute is required", av.PathExpression, expectedValueDescritpion)
 }
 
 func (av RequireIfAttributeIsOneOf) Validate(ctx context.Context, req RequireIfAttributeIsOneOfRequest, res *RequireIfAttributeIsOneOfResponse) {
@@ -84,7 +84,7 @@ func (av RequireIfAttributeIsOneOf) Validate(ctx context.Context, req RequireIfA
 
 	if len(paths) == 0 {
 		res.Diagnostics.AddError(
-			"Invalid attribute configuration",
+			fmt.Sprintf("Invalid configuration for attribute %s", req.Path),
 			"Path must be set",
 		)
 		return
@@ -95,7 +95,7 @@ func (av RequireIfAttributeIsOneOf) Validate(ctx context.Context, req RequireIfA
 		diags = req.Config.GetAttribute(ctx, path, &mpVal)
 		if diags.HasError() {
 			res.Diagnostics.AddError(
-				"Invalid attribute configuration",
+				fmt.Sprintf("Invalid configuration for attribute %s", req.Path),
 				fmt.Sprintf("Unable to retrieve attribute path: %q", path),
 			)
 			return
@@ -111,7 +111,7 @@ func (av RequireIfAttributeIsOneOf) Validate(ctx context.Context, req RequireIfA
 				if req.ConfigValue.IsNull() || req.ConfigValue.IsUnknown() {
 					res.Diagnostics.AddAttributeError(
 						path,
-						"Invalid attribute configuration",
+						fmt.Sprintf("Invalid configuration for attribute %s", req.Path),
 						av.Description(ctx),
 					)
 				}
