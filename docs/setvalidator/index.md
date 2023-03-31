@@ -7,13 +7,15 @@ It will be used into the `Validators` field of the `schema.SetAttribute` struct.
 
 ```go
 import (
-    fmapvalidator "github.com/FrangipaneTeam/terraform-plugin-framework-validators/mapvalidator"
+    fsetvalidator "github.com/FrangipaneTeam/terraform-plugin-framework-validators/setvalidator"
 )
 ```
 
 ## List of Validators
 
 Every `string` validators are available for maps thanks to a generic validator provided by Hashicorp. See the section below for more details.
+
+- [`RequireIfAttributeIsOneOf`](../common/require_if_attribute_is_one_of.md) - This validator is used to require the attribute if another attribute is one of the given values.
 
 ### Special
 

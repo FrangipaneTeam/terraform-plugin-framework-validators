@@ -13,6 +13,8 @@ import (
 
 ## List of Validators
 
+- [`RequireIfAttributeIsOneOf`](../common/require_if_attribute_is_one_of.md) - This validator is used to require the attribute if another attribute is one of the given values.
+
 ### Network
 
 - [`IsIP`](isip.md) - This validator is used to check if the string is a valid IP address.
