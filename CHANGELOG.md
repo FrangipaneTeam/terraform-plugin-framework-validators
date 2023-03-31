@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.2.1...v1.3.0) (2023-03-31)
+
+
+### Features
+
+* add new validator `require_if_attribute_is_one_of` ([b685181](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/b685181ca9f1f35bf14dbd7851f9a69bbe6040e8))
+
 ## [1.2.1](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.2.0...v1.2.1) (2023-03-29)
 
 
