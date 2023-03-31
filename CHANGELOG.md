@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.3.0...v1.3.1) (2023-03-31)
+
+
+### Bug Fixes
+
+* error message and docs for `RequireIfAttributeIsOneOf` ([#42](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/issues/42)) ([b1b3096](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/b1b30966e6fb3fe51177af27dd7994b2669381ab))
+
 ## [1.3.0](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.2.1...v1.3.0) (2023-03-31)
 
 
