@@ -51,7 +51,7 @@ func (av RequireIfAttributeIsOneOf) Description(_ context.Context) string {
 		}
 		expectedValueDescritpion += fmt.Sprintf("%q, ", expectedValue)
 	}
-	return fmt.Sprintf("If %q attribute is set and the value is one of %s. This attribute is required", av.PathExpression, expectedValueDescritpion)
+	return fmt.Sprintf("If %q attribute is set and the value is one of %s, this attribute is required", av.PathExpression, expectedValueDescritpion)
 }
 
 func (av RequireIfAttributeIsOneOf) MarkdownDescription(_ context.Context) string {
