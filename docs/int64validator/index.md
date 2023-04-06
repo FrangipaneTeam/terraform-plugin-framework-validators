@@ -15,6 +15,7 @@ import (
 
 - [`RequireIfAttributeIsOneOf`](../common/require_if_attribute_is_one_of.md) - This validator is used to require the attribute if another attribute is one of the given values.
 - [`AttributeIsDivisibleByAnInteger`](attribute_is_divisible_by_an_integer.md) - This validator is used to validate that the attribute is divisible by an integer.
+- [`ZeroRemainder`](zero_remainder.md) - This validator checks if the configured attribute is divisible by a specified integer X, and has zero remainder.
 
 ## Special
 
