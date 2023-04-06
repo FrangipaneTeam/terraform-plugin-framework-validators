@@ -14,7 +14,7 @@ import (
 	"github.com/FrangipaneTeam/terraform-plugin-framework-validators/internal"
 )
 
-func TestRequireIfValidatorIsOneOfValidatorValidate(t *testing.T) {
+func TestRequireIfAttributeIsOneOfValidator(t *testing.T) {
 	t.Parallel()
 
 	type testCase struct {
