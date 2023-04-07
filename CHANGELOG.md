@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.4.0](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.3.1...v1.4.0) (2023-04-07)
+
+
+### Features
+
+* add int64 validator `AttributeIsDevidedByAnInteger` ([#46](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/issues/46)) ([fa6fcbe](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/fa6fcbee7f6152f295e03f231353baa0957dd3f2))
+* add int64 validator `ZeroRemainder` ([#47](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/issues/47)) ([d7c6d19](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/d7c6d1961a02eeb8639b623ef9bf5ad352baa0fa))
+
+
+### Miscellaneous
+
+* CODE_OF_CONDUCT ([1484d02](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/1484d02b4987051f86bed62645789ee99fbdd509))
+* LICENCE ([1d4c81a](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/1d4c81ac0a8b5f19b5b77cbb9cec9015c6ded3d2))
+
 ## [1.3.1](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.3.0...v1.3.1) (2023-03-31)
 
 
