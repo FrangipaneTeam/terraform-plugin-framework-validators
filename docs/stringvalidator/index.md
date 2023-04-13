@@ -14,6 +14,7 @@ import (
 ## List of Validators
 
 - [`RequireIfAttributeIsOneOf`](../common/require_if_attribute_is_one_of.md) - This validator is used to require the attribute if another attribute is one of the given values.
+- [`OneOfWithDescription`](oneofwithdescription.md) - This validator is used to check if the string is one of the given values and format the description and the markdown description.
 
 ### Network
 
@@ -21,11 +22,11 @@ import (
 - [`IsNetmask`](isnetmask.md) - This validator is used to check if the string is a valid netmask.
 - [`IsMacAddress`](ismacaddress.md) - This validator is used to check if the string is a valid MAC address.
 
-## String
+### String
 
 - [`IsURN`](isurn.md) - This validator is used to check if the string is a valid URN.
 - [`IsUUID`](isuuid.md) - This validator is used to check if the string is a valid UUID.
 
-## Special
+### Special
 
 - [`Not`](not.md) - This validator is used to negate the result of another validator.

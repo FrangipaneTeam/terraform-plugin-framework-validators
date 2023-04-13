@@ -21,6 +21,8 @@ Every `string` validators are available for maps thanks to a generic validator p
 
 - [`Not`](not.md) - This validator is used to negate the result of another validator.
 
+## Generic
+
 ### String
 
 Hashicorp provides a generic validator for strings. It uses the validators already defined in string to validate a list of strings.
