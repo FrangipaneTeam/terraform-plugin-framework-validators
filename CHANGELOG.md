@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.4.0...v1.5.0) (2023-04-14)
+
+
+### Features
+
+* add string and int64 validator `OneOfWithDescription` ([23b6925](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/23b692537a9220243c2d91e16722755b7b25df25))
+
 ## [1.4.0](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.3.1...v1.4.0) (2023-04-07)
 
 
