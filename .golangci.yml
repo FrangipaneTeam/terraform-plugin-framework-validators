@@ -112,4 +112,34 @@ linters-settings:
     # Choose whether to use the extra rules.
     # Default: false
     extra-rules: true
-  
+
+  depguard:
+    # Rules to apply.
+    #
+    # Variables:
+    # - File Variables
+    #   you can still use and exclamation mark ! in front of a variable to say not to use it.
+    #   Example !$test will match any file that is not a go test file.
+    #
+    #   `$all` - matches all go files
+    #   `$test` - matches all go test files
+    #
+    # - Package Variables
+    #
+    #  `$gostd` - matches all of go's standard library (Pulled from `GOROOT`)
+    #
+    # Default: no rules.
+    rules:
+      # Name of a rule.
+      main:
+        # List of file globs that will match this list of settings to compare against.
+        # Default: $all
+        files:
+          - "!$test"
+        # List of allowed packages.
+        allow:
+          - $gostd
+          - github.com/hashicorp
+          - github.com/FrangipaneTeam
+        # Packages that are not allowed where the value is a suggestion.
+        deny:
