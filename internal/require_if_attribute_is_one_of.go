@@ -74,11 +74,13 @@ func (av RequireIfAttributeIsOneOf) Validate(ctx context.Context, req RequireIfA
 		return
 	}
 
+	expression := req.PathExpression.Merge(av.PathExpression)
+
 	// Here attribute configuration is null or unknown, so we need to check if attribute in the path
 	// is equal to one of the excepted values
-	paths, diags := req.Config.PathMatches(ctx, av.PathExpression)
+	paths, diags := req.Config.PathMatches(ctx, expression)
 	res.Diagnostics.Append(diags...)
-	if diags.HasError() {
+	if res.Diagnostics.HasError() {
 		return
 	}
 
@@ -123,9 +125,10 @@ func (av RequireIfAttributeIsOneOf) Validate(ctx context.Context, req RequireIfA
 
 func (av RequireIfAttributeIsOneOf) ValidateBool(ctx context.Context, req validator.BoolRequest, resp *validator.BoolResponse) {
 	validateReq := RequireIfAttributeIsOneOfRequest{
-		Config:      req.Config,
-		ConfigValue: req.ConfigValue,
-		Path:        req.Path,
+		Config:         req.Config,
+		ConfigValue:    req.ConfigValue,
+		Path:           req.Path,
+		PathExpression: req.PathExpression,
 	}
 	validateResp := &RequireIfAttributeIsOneOfResponse{}
 
@@ -136,9 +139,10 @@ func (av RequireIfAttributeIsOneOf) ValidateBool(ctx context.Context, req valida
 
 func (av RequireIfAttributeIsOneOf) ValidateFloat64(ctx context.Context, req validator.Float64Request, resp *validator.Float64Response) {
 	validateReq := RequireIfAttributeIsOneOfRequest{
-		Config:      req.Config,
-		ConfigValue: req.ConfigValue,
-		Path:        req.Path,
+		Config:         req.Config,
+		ConfigValue:    req.ConfigValue,
+		Path:           req.Path,
+		PathExpression: req.PathExpression,
 	}
 	validateResp := &RequireIfAttributeIsOneOfResponse{}
 
@@ -149,9 +153,10 @@ func (av RequireIfAttributeIsOneOf) ValidateFloat64(ctx context.Context, req val
 
 func (av RequireIfAttributeIsOneOf) ValidateInt64(ctx context.Context, req validator.Int64Request, resp *validator.Int64Response) {
 	validateReq := RequireIfAttributeIsOneOfRequest{
-		Config:      req.Config,
-		ConfigValue: req.ConfigValue,
-		Path:        req.Path,
+		Config:         req.Config,
+		ConfigValue:    req.ConfigValue,
+		Path:           req.Path,
+		PathExpression: req.PathExpression,
 	}
 	validateResp := &RequireIfAttributeIsOneOfResponse{}
 
@@ -162,9 +167,10 @@ func (av RequireIfAttributeIsOneOf) ValidateInt64(ctx context.Context, req valid
 
 func (av RequireIfAttributeIsOneOf) ValidateList(ctx context.Context, req validator.ListRequest, resp *validator.ListResponse) {
 	validateReq := RequireIfAttributeIsOneOfRequest{
-		Config:      req.Config,
-		ConfigValue: req.ConfigValue,
-		Path:        req.Path,
+		Config:         req.Config,
+		ConfigValue:    req.ConfigValue,
+		Path:           req.Path,
+		PathExpression: req.PathExpression,
 	}
 	validateResp := &RequireIfAttributeIsOneOfResponse{}
 
@@ -175,9 +181,10 @@ func (av RequireIfAttributeIsOneOf) ValidateList(ctx context.Context, req valida
 
 func (av RequireIfAttributeIsOneOf) ValidateMap(ctx context.Context, req validator.MapRequest, resp *validator.MapResponse) {
 	validateReq := RequireIfAttributeIsOneOfRequest{
-		Config:      req.Config,
-		ConfigValue: req.ConfigValue,
-		Path:        req.Path,
+		Config:         req.Config,
+		ConfigValue:    req.ConfigValue,
+		Path:           req.Path,
+		PathExpression: req.PathExpression,
 	}
 	validateResp := &RequireIfAttributeIsOneOfResponse{}
 
@@ -188,9 +195,10 @@ func (av RequireIfAttributeIsOneOf) ValidateMap(ctx context.Context, req validat
 
 func (av RequireIfAttributeIsOneOf) ValidateNumber(ctx context.Context, req validator.NumberRequest, resp *validator.NumberResponse) {
 	validateReq := RequireIfAttributeIsOneOfRequest{
-		Config:      req.Config,
-		ConfigValue: req.ConfigValue,
-		Path:        req.Path,
+		Config:         req.Config,
+		ConfigValue:    req.ConfigValue,
+		Path:           req.Path,
+		PathExpression: req.PathExpression,
 	}
 	validateResp := &RequireIfAttributeIsOneOfResponse{}
 
@@ -201,9 +209,10 @@ func (av RequireIfAttributeIsOneOf) ValidateNumber(ctx context.Context, req vali
 
 func (av RequireIfAttributeIsOneOf) ValidateObject(ctx context.Context, req validator.ObjectRequest, resp *validator.ObjectResponse) {
 	validateReq := RequireIfAttributeIsOneOfRequest{
-		Config:      req.Config,
-		ConfigValue: req.ConfigValue,
-		Path:        req.Path,
+		Config:         req.Config,
+		ConfigValue:    req.ConfigValue,
+		Path:           req.Path,
+		PathExpression: req.PathExpression,
 	}
 	validateResp := &RequireIfAttributeIsOneOfResponse{}
 
@@ -214,9 +223,10 @@ func (av RequireIfAttributeIsOneOf) ValidateObject(ctx context.Context, req vali
 
 func (av RequireIfAttributeIsOneOf) ValidateSet(ctx context.Context, req validator.SetRequest, resp *validator.SetResponse) {
 	validateReq := RequireIfAttributeIsOneOfRequest{
-		Config:      req.Config,
-		ConfigValue: req.ConfigValue,
-		Path:        req.Path,
+		Config:         req.Config,
+		ConfigValue:    req.ConfigValue,
+		Path:           req.Path,
+		PathExpression: req.PathExpression,
 	}
 	validateResp := &RequireIfAttributeIsOneOfResponse{}
 
@@ -227,9 +237,10 @@ func (av RequireIfAttributeIsOneOf) ValidateSet(ctx context.Context, req validat
 
 func (av RequireIfAttributeIsOneOf) ValidateString(ctx context.Context, req validator.StringRequest, resp *validator.StringResponse) {
 	validateReq := RequireIfAttributeIsOneOfRequest{
-		Config:      req.Config,
-		ConfigValue: req.ConfigValue,
-		Path:        req.Path,
+		Config:         req.Config,
+		ConfigValue:    req.ConfigValue,
+		Path:           req.Path,
+		PathExpression: req.PathExpression,
 	}
 	validateResp := &RequireIfAttributeIsOneOfResponse{}
 

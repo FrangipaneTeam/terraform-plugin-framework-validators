@@ -15,10 +15,6 @@ import (
 func TestNotValidator(t *testing.T) {
 	t.Parallel()
 
-	type testStruct struct {
-		foo string
-	}
-
 	type testCase struct {
 		val         []attr.Value
 		expectError bool
