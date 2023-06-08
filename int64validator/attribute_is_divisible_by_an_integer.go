@@ -36,7 +36,7 @@ func (validator attributeIsDivisibleByAnInteger) ValidateInt64(
 		return
 	}
 
-	paths, diags := req.Config.PathMatches(ctx, validator.PathExpression)
+	paths, diags := req.Config.PathMatches(ctx, req.PathExpression.Merge(validator.PathExpression))
 	res.Diagnostics.Append(diags...)
 	if diags.HasError() {
 		return
