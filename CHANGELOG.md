@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.5.2](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.5.1...v1.5.2) (2023-06-08)
+
+
+### Bug Fixes
+
+* pathExpression for RequireIfAttributeIsOneOf validator ([#53](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/issues/53)) ([2058e4c](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/2058e4c01947a90d0d923968a814aeca4532acbf))
+* pathExpression missing in attributeIsDivisibleByAnInteger validator ([e99edac](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/e99edac0042a7198ee0d30fb1a38c70b307dc006))
+
 ## [1.5.1](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.5.0...v1.5.1) (2023-04-25)
 
 
