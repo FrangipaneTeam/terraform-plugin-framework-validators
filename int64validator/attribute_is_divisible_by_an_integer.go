@@ -32,7 +32,7 @@ func (validator attributeIsDivisibleByAnInteger) ValidateInt64(
 	res *validator.Int64Response,
 ) {
 	// If attribute configuration is not null or unknown, there is nothing else to validate
-	if req.ConfigValue.IsNull() && req.ConfigValue.IsUnknown() {
+	if req.ConfigValue.IsNull() || req.ConfigValue.IsUnknown() {
 		return
 	}
 
