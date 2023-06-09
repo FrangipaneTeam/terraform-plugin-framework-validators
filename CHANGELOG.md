@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.1](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.6.0...v1.6.1) (2023-06-09)
+
+
+### Bug Fixes
+
+* attributeIsDivisibleByAnInteger bad check if value IsNull and IsUnknown ([#58](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/issues/58)) ([7b8fd83](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/7b8fd8311024606d4f76361bf31131feaff74920))
+
 ## [1.6.0](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.5.2...v1.6.0) (2023-06-09)
 
 
