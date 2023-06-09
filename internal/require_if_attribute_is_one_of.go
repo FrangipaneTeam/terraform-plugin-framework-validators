@@ -46,10 +46,10 @@ func (av RequireIfAttributeIsOneOf) Description(_ context.Context) string {
 	var expectedValueDescritpion string
 	for i, expectedValue := range av.ExceptedValues {
 		if i == len(av.ExceptedValues)-1 {
-			expectedValueDescritpion += fmt.Sprintf("%s, ", expectedValue.String())
+			expectedValueDescritpion += expectedValue.String()
 			break
 		}
-		expectedValueDescritpion += expectedValue.String()
+		expectedValueDescritpion += fmt.Sprintf("%s, ", expectedValue.String())
 	}
 	return fmt.Sprintf("If %s attribute is set and the value is one of %s, this attribute is REQUIRED", av.PathExpression, expectedValueDescritpion)
 }
@@ -110,7 +110,7 @@ func (av RequireIfAttributeIsOneOf) Validate(ctx context.Context, req RequireIfA
 
 		for _, expectedValue := range av.ExceptedValues {
 			if mpVal.Equal(expectedValue) {
-				if req.ConfigValue.IsNull() || req.ConfigValue.IsUnknown() {
+				if req.ConfigValue.IsNull() {
 					res.Diagnostics.AddAttributeError(
 						path,
 						fmt.Sprintf("Invalid configuration for attribute %s", req.Path),
