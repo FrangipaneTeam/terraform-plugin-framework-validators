@@ -16,11 +16,11 @@ import (
 	"github.com/FrangipaneTeam/terraform-plugin-framework-validators/internal"
 )
 
-func TestRequireIfAttributeIsOneOfValidator(t *testing.T) {
+func TestNullIfAttributeIsOneOfValidator(t *testing.T) {
 	t.Parallel()
 
 	type testCase struct {
-		req             internal.RequireIfAttributeIsOneOfRequest
+		req             internal.NullIfAttributeIsOneOfRequest
 		in              path.Expression
 		inPath          path.Path
 		exceptedValues  []attr.Value
@@ -30,8 +30,8 @@ func TestRequireIfAttributeIsOneOfValidator(t *testing.T) {
 
 	testCases := map[string]testCase{
 		"baseString": {
-			req: internal.RequireIfAttributeIsOneOfRequest{
-				ConfigValue:    types.StringNull(),
+			req: internal.NullIfAttributeIsOneOfRequest{
+				ConfigValue:    types.StringValue("value"),
 				Path:           path.Root("bar"),
 				PathExpression: path.MatchRoot("bar"),
 				Config: tfsdk.Config{
@@ -48,7 +48,7 @@ func TestRequireIfAttributeIsOneOfValidator(t *testing.T) {
 						},
 					}, map[string]tftypes.Value{
 						"foo": tftypes.NewValue(tftypes.String, "excepted value"),
-						"bar": tftypes.NewValue(tftypes.String, attr.NullValueString),
+						"bar": tftypes.NewValue(tftypes.String, "value"),
 					}),
 				},
 			},
@@ -58,11 +58,11 @@ func TestRequireIfAttributeIsOneOfValidator(t *testing.T) {
 				types.StringValue("excepted value"),
 			},
 			expError:        true,
-			expErrorMessage: "If foo attribute is set and the value is one of \"excepted value\", this attribute is required",
+			expErrorMessage: "If foo attribute is set and the value is one of \"excepted value\", this attribute is null",
 		},
 		"extendedString": {
-			req: internal.RequireIfAttributeIsOneOfRequest{
-				ConfigValue:    types.StringNull(),
+			req: internal.NullIfAttributeIsOneOfRequest{
+				ConfigValue:    types.StringValue("bar value"),
 				Path:           path.Root("foobar").AtListIndex(0).AtName("bar2"),
 				PathExpression: path.MatchRoot("foobar").AtListIndex(0).AtName("bar2"),
 				Config: tfsdk.Config{
@@ -124,11 +124,11 @@ func TestRequireIfAttributeIsOneOfValidator(t *testing.T) {
 				types.StringValue("bar1 excepted value"),
 			},
 			expError:        true,
-			expErrorMessage: "If foobar[0].bar1 attribute is set and the value is one of \"bar1 excepted value\", this attribute is required",
+			expErrorMessage: "If foobar[0].bar1 attribute is set and the value is one of \"bar1 excepted value\", this attribute is null",
 		},
 		"baseInt64": {
-			req: internal.RequireIfAttributeIsOneOfRequest{
-				ConfigValue:    types.StringNull(),
+			req: internal.NullIfAttributeIsOneOfRequest{
+				ConfigValue:    types.StringValue("bar value"),
 				Path:           path.Root("bar"),
 				PathExpression: path.MatchRoot("bar"),
 				Config: tfsdk.Config{
@@ -155,11 +155,11 @@ func TestRequireIfAttributeIsOneOfValidator(t *testing.T) {
 				types.Int64Value(10),
 			},
 			expError:        true,
-			expErrorMessage: "If foo attribute is set and the value is one of 10, this attribute is required",
+			expErrorMessage: "If foo attribute is set and the value is one of 10, this attribute is null",
 		},
 		"baseBool": {
-			req: internal.RequireIfAttributeIsOneOfRequest{
-				ConfigValue:    types.StringNull(),
+			req: internal.NullIfAttributeIsOneOfRequest{
+				ConfigValue:    types.StringValue("bar value"),
 				Path:           path.Root("bar"),
 				PathExpression: path.MatchRoot("bar"),
 				Config: tfsdk.Config{
@@ -186,10 +186,10 @@ func TestRequireIfAttributeIsOneOfValidator(t *testing.T) {
 				types.BoolValue(true),
 			},
 			expError:        true,
-			expErrorMessage: "If foo attribute is set and the value is one of true, this attribute is required",
+			expErrorMessage: "If foo attribute is set and the value is one of true, this attribute is null",
 		},
 		"path-attribute-is-null": {
-			req: internal.RequireIfAttributeIsOneOfRequest{
+			req: internal.NullIfAttributeIsOneOfRequest{
 				ConfigValue:    types.StringNull(),
 				Path:           path.Root("bar"),
 				PathExpression: path.MatchRoot("bar"),
@@ -218,9 +218,9 @@ func TestRequireIfAttributeIsOneOfValidator(t *testing.T) {
 			},
 			expError: false,
 		},
-		"config-attribute-is-set": {
-			req: internal.RequireIfAttributeIsOneOfRequest{
-				ConfigValue:    types.StringValue("excepted value"),
+		"config-attribute-is-null": {
+			req: internal.NullIfAttributeIsOneOfRequest{
+				ConfigValue:    types.StringNull(),
 				Path:           path.Root("bar"),
 				PathExpression: path.MatchRoot("bar"),
 				Config: tfsdk.Config{
@@ -249,8 +249,8 @@ func TestRequireIfAttributeIsOneOfValidator(t *testing.T) {
 			expError: false,
 		},
 		"config-attribute-is-null-and-path-attribute-not-match": {
-			req: internal.RequireIfAttributeIsOneOfRequest{
-				ConfigValue:    types.StringNull(),
+			req: internal.NullIfAttributeIsOneOfRequest{
+				ConfigValue:    types.StringValue("bar value"),
 				Path:           path.Root("bar"),
 				PathExpression: path.MatchRoot("bar"),
 				Config: tfsdk.Config{
@@ -279,7 +279,7 @@ func TestRequireIfAttributeIsOneOfValidator(t *testing.T) {
 			expError: false,
 		},
 		"unknown": {
-			req: internal.RequireIfAttributeIsOneOfRequest{
+			req: internal.NullIfAttributeIsOneOfRequest{
 				ConfigValue:    types.StringUnknown(),
 				Path:           path.Root("bar"),
 				PathExpression: path.MatchRoot("bar"),
@@ -314,9 +314,9 @@ func TestRequireIfAttributeIsOneOfValidator(t *testing.T) {
 		name, test := name, test
 		t.Run(name, func(t *testing.T) {
 			t.Parallel()
-			res := &internal.RequireIfAttributeIsOneOfResponse{}
+			res := &internal.NullIfAttributeIsOneOfResponse{}
 
-			internal.RequireIfAttributeIsOneOf{
+			internal.NullIfAttributeIsOneOf{
 				PathExpression: test.in,
 				ExceptedValues: test.exceptedValues,
 			}.Validate(context.TODO(), test.req, res)
