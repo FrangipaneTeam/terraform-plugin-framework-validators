@@ -76,7 +76,7 @@ func (av NullIfAttributeIsOneOf) Validate(ctx context.Context, req NullIfAttribu
 
 	// Here attribute configuration is null or unknown, so we need to check if attribute in the path
 	// is equal to one of the excepted values
-	paths, diags := req.Config.PathMatches(ctx, av.PathExpression)
+	paths, diags := req.Config.PathMatches(ctx, req.PathExpression.Merge(av.PathExpression))
 	res.Diagnostics.Append(diags...)
 	if diags.HasError() {
 		return
