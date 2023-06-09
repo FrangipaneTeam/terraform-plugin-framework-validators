@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.6.0](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.5.2...v1.6.0) (2023-06-09)
+
+
+### Features
+
+* add validator `null_if_attribute_is_one_of` ([#52](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/issues/52)) ([ada0563](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/ada056330e16d045868d187abd703e7c86923911))
+
+
+### Bug Fixes
+
+* pathExpression missing in attribute NullIfAttributeIsOneOf validator ([#57](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/issues/57)) ([6b0e629](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/6b0e6291635435fcc84715b3a4bd4533621bdf0f))
+
 ## [1.5.2](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.5.1...v1.5.2) (2023-06-08)
 
 
