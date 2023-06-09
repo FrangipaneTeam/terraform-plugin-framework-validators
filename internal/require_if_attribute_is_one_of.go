@@ -46,12 +46,12 @@ func (av RequireIfAttributeIsOneOf) Description(_ context.Context) string {
 	var expectedValueDescritpion string
 	for i, expectedValue := range av.ExceptedValues {
 		if i == len(av.ExceptedValues)-1 {
-			expectedValueDescritpion += expectedValue.String()
+			expectedValueDescritpion += fmt.Sprintf("%s, ", expectedValue.String())
 			break
 		}
 		expectedValueDescritpion += expectedValue.String()
 	}
-	return fmt.Sprintf("If %s attribute is set and the value is one of %s, this attribute is required", av.PathExpression, expectedValueDescritpion)
+	return fmt.Sprintf("If %s attribute is set and the value is one of %s, this attribute is REQUIRED", av.PathExpression, expectedValueDescritpion)
 }
 
 func (av RequireIfAttributeIsOneOf) MarkdownDescription(_ context.Context) string {
@@ -63,7 +63,7 @@ func (av RequireIfAttributeIsOneOf) MarkdownDescription(_ context.Context) strin
 		}
 		expectedValueDescritpion += fmt.Sprintf("`%s`, ", expectedValue)
 	}
-	return fmt.Sprintf("If %s attribute is set and the value is one of %s, this attribute is required", av.PathExpression, expectedValueDescritpion)
+	return fmt.Sprintf("If %s attribute is set and the value is one of %s, this attribute is REQUIRED", av.PathExpression, expectedValueDescritpion)
 }
 
 func (av RequireIfAttributeIsOneOf) Validate(ctx context.Context, req RequireIfAttributeIsOneOfRequest, res *RequireIfAttributeIsOneOfResponse) {

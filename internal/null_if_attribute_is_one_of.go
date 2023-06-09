@@ -46,12 +46,12 @@ func (av NullIfAttributeIsOneOf) Description(_ context.Context) string {
 	var expectedValueDescritpion string
 	for i, expectedValue := range av.ExceptedValues {
 		if i == len(av.ExceptedValues)-1 {
-			expectedValueDescritpion += expectedValue.String()
+			expectedValueDescritpion += fmt.Sprintf("%s, ", expectedValue.String())
 			break
 		}
 		expectedValueDescritpion += expectedValue.String()
 	}
-	return fmt.Sprintf("If %s attribute is set and the value is one of %s, this attribute is null", av.PathExpression, expectedValueDescritpion)
+	return fmt.Sprintf("If %s attribute is set and the value is one of %s, this attribute is NULL", av.PathExpression, expectedValueDescritpion)
 }
 
 func (av NullIfAttributeIsOneOf) MarkdownDescription(_ context.Context) string {
@@ -63,7 +63,7 @@ func (av NullIfAttributeIsOneOf) MarkdownDescription(_ context.Context) string {
 		}
 		expectedValueDescritpion += fmt.Sprintf("`%s`, ", expectedValue)
 	}
-	return fmt.Sprintf("If %s attribute is set and the value is one of %s, this attribute is null", av.PathExpression, expectedValueDescritpion)
+	return fmt.Sprintf("If %s attribute is set and the value is one of %s, this attribute is NULL", av.PathExpression, expectedValueDescritpion)
 }
 
 func (av NullIfAttributeIsOneOf) Validate(ctx context.Context, req NullIfAttributeIsOneOfRequest, res *NullIfAttributeIsOneOfResponse) {
