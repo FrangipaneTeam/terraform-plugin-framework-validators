@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.2](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.6.1...v1.6.2) (2023-06-09)
+
+
+### Bug Fixes
+
+* bad func used for nullattributeisoneof and fix description ([#60](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/issues/60)) ([0411638](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/04116382b39e8ab72fad520a17a1940b17e999b7))
+
 ## [1.6.1](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.6.0...v1.6.1) (2023-06-09)
 
 
