@@ -46,10 +46,10 @@ func (av NullIfAttributeIsOneOf) Description(_ context.Context) string {
 	var expectedValueDescritpion string
 	for i, expectedValue := range av.ExceptedValues {
 		if i == len(av.ExceptedValues)-1 {
-			expectedValueDescritpion += fmt.Sprintf("%s, ", expectedValue.String())
+			expectedValueDescritpion += expectedValue.String()
 			break
 		}
-		expectedValueDescritpion += expectedValue.String()
+		expectedValueDescritpion += fmt.Sprintf("%s, ", expectedValue.String())
 	}
 	return fmt.Sprintf("If %s attribute is set and the value is one of %s, this attribute is NULL", av.PathExpression, expectedValueDescritpion)
 }
@@ -122,9 +122,10 @@ func (av NullIfAttributeIsOneOf) Validate(ctx context.Context, req NullIfAttribu
 
 func (av NullIfAttributeIsOneOf) ValidateBool(ctx context.Context, req validator.BoolRequest, resp *validator.BoolResponse) {
 	validateReq := NullIfAttributeIsOneOfRequest{
-		Config:      req.Config,
-		ConfigValue: req.ConfigValue,
-		Path:        req.Path,
+		Config:         req.Config,
+		ConfigValue:    req.ConfigValue,
+		Path:           req.Path,
+		PathExpression: req.PathExpression,
 	}
 	validateResp := &NullIfAttributeIsOneOfResponse{}
 
@@ -135,9 +136,10 @@ func (av NullIfAttributeIsOneOf) ValidateBool(ctx context.Context, req validator
 
 func (av NullIfAttributeIsOneOf) ValidateFloat64(ctx context.Context, req validator.Float64Request, resp *validator.Float64Response) {
 	validateReq := NullIfAttributeIsOneOfRequest{
-		Config:      req.Config,
-		ConfigValue: req.ConfigValue,
-		Path:        req.Path,
+		Config:         req.Config,
+		ConfigValue:    req.ConfigValue,
+		Path:           req.Path,
+		PathExpression: req.PathExpression,
 	}
 	validateResp := &NullIfAttributeIsOneOfResponse{}
 
@@ -148,9 +150,10 @@ func (av NullIfAttributeIsOneOf) ValidateFloat64(ctx context.Context, req valida
 
 func (av NullIfAttributeIsOneOf) ValidateInt64(ctx context.Context, req validator.Int64Request, resp *validator.Int64Response) {
 	validateReq := NullIfAttributeIsOneOfRequest{
-		Config:      req.Config,
-		ConfigValue: req.ConfigValue,
-		Path:        req.Path,
+		Config:         req.Config,
+		ConfigValue:    req.ConfigValue,
+		Path:           req.Path,
+		PathExpression: req.PathExpression,
 	}
 	validateResp := &NullIfAttributeIsOneOfResponse{}
 
@@ -161,9 +164,10 @@ func (av NullIfAttributeIsOneOf) ValidateInt64(ctx context.Context, req validato
 
 func (av NullIfAttributeIsOneOf) ValidateList(ctx context.Context, req validator.ListRequest, resp *validator.ListResponse) {
 	validateReq := NullIfAttributeIsOneOfRequest{
-		Config:      req.Config,
-		ConfigValue: req.ConfigValue,
-		Path:        req.Path,
+		Config:         req.Config,
+		ConfigValue:    req.ConfigValue,
+		Path:           req.Path,
+		PathExpression: req.PathExpression,
 	}
 	validateResp := &NullIfAttributeIsOneOfResponse{}
 
@@ -174,9 +178,10 @@ func (av NullIfAttributeIsOneOf) ValidateList(ctx context.Context, req validator
 
 func (av NullIfAttributeIsOneOf) ValidateMap(ctx context.Context, req validator.MapRequest, resp *validator.MapResponse) {
 	validateReq := NullIfAttributeIsOneOfRequest{
-		Config:      req.Config,
-		ConfigValue: req.ConfigValue,
-		Path:        req.Path,
+		Config:         req.Config,
+		ConfigValue:    req.ConfigValue,
+		Path:           req.Path,
+		PathExpression: req.PathExpression,
 	}
 	validateResp := &NullIfAttributeIsOneOfResponse{}
 
@@ -187,9 +192,10 @@ func (av NullIfAttributeIsOneOf) ValidateMap(ctx context.Context, req validator.
 
 func (av NullIfAttributeIsOneOf) ValidateNumber(ctx context.Context, req validator.NumberRequest, resp *validator.NumberResponse) {
 	validateReq := NullIfAttributeIsOneOfRequest{
-		Config:      req.Config,
-		ConfigValue: req.ConfigValue,
-		Path:        req.Path,
+		Config:         req.Config,
+		ConfigValue:    req.ConfigValue,
+		Path:           req.Path,
+		PathExpression: req.PathExpression,
 	}
 	validateResp := &NullIfAttributeIsOneOfResponse{}
 
@@ -200,9 +206,10 @@ func (av NullIfAttributeIsOneOf) ValidateNumber(ctx context.Context, req validat
 
 func (av NullIfAttributeIsOneOf) ValidateObject(ctx context.Context, req validator.ObjectRequest, resp *validator.ObjectResponse) {
 	validateReq := NullIfAttributeIsOneOfRequest{
-		Config:      req.Config,
-		ConfigValue: req.ConfigValue,
-		Path:        req.Path,
+		Config:         req.Config,
+		ConfigValue:    req.ConfigValue,
+		Path:           req.Path,
+		PathExpression: req.PathExpression,
 	}
 	validateResp := &NullIfAttributeIsOneOfResponse{}
 
@@ -213,9 +220,10 @@ func (av NullIfAttributeIsOneOf) ValidateObject(ctx context.Context, req validat
 
 func (av NullIfAttributeIsOneOf) ValidateSet(ctx context.Context, req validator.SetRequest, resp *validator.SetResponse) {
 	validateReq := NullIfAttributeIsOneOfRequest{
-		Config:      req.Config,
-		ConfigValue: req.ConfigValue,
-		Path:        req.Path,
+		Config:         req.Config,
+		ConfigValue:    req.ConfigValue,
+		Path:           req.Path,
+		PathExpression: req.PathExpression,
 	}
 	validateResp := &NullIfAttributeIsOneOfResponse{}
 
@@ -226,9 +234,10 @@ func (av NullIfAttributeIsOneOf) ValidateSet(ctx context.Context, req validator.
 
 func (av NullIfAttributeIsOneOf) ValidateString(ctx context.Context, req validator.StringRequest, resp *validator.StringResponse) {
 	validateReq := NullIfAttributeIsOneOfRequest{
-		Config:      req.Config,
-		ConfigValue: req.ConfigValue,
-		Path:        req.Path,
+		Config:         req.Config,
+		ConfigValue:    req.ConfigValue,
+		Path:           req.Path,
+		PathExpression: req.PathExpression,
 	}
 	validateResp := &NullIfAttributeIsOneOfResponse{}
 
