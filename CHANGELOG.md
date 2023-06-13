@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.6.3](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.6.2...v1.6.3) (2023-06-13)
+
+
+### Bug Fixes
+
+* field possible unknown for RequireIfAttributeIsOneOf ([6a4935f](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/6a4935f8548b483c52a6bd91f13c85b0a4161d73))
+* missing path expression in NullIfAttributeIsOneOf ([3b6668d](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/3b6668d66e956b989386a0cd29ff7c1d5f2b3316))
+
+
+### Miscellaneous
+
+* **deps:** bump github.com/hashicorp/terraform-plugin-framework ([#62](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/issues/62)) ([cc93eca](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/cc93ecabbe6b55bdaed3d55e2af1725a3cf4e433))
+
 ## [1.6.2](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.6.1...v1.6.2) (2023-06-09)
 
 
