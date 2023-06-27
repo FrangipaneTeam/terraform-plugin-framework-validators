@@ -1,6 +1,6 @@
-# Changelog
+## 1.7.0 (Unreleased)
 
-## [1.6.4](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.6.3...v1.6.4) (2023-06-20)
+## 1.6.4 (2023-06-20)
 
 ### Bug Fixes
 
@@ -14,7 +14,7 @@
 * **deps:** bump github.com/hashicorp/terraform-plugin-go ([#67](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/issues/67)) ([6a30049](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/6a30049c0c056f3d307c6699d3c25747e5246984))
 * Force update changelog ([25ea62d](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/25ea62d729c7f079728e1a8bb9df794046822ef1))
 
-## [1.6.3](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.6.2...v1.6.3) (2023-06-13)
+## 1.6.3 (2023-06-13)
 
 ### Bug Fixes
 
@@ -25,19 +25,19 @@
 
 * **deps:** bump github.com/hashicorp/terraform-plugin-framework ([#62](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/issues/62)) ([cc93eca](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/cc93ecabbe6b55bdaed3d55e2af1725a3cf4e433))
 
-## [1.6.2](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.6.1...v1.6.2) (2023-06-09)
+## 1.6.2 (2023-06-09)
 
 ### Bug Fixes
 
 * bad func used for nullattributeisoneof and fix description ([#60](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/issues/60)) ([0411638](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/04116382b39e8ab72fad520a17a1940b17e999b7))
 
-## [1.6.1](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.6.0...v1.6.1) (2023-06-09)
+## 1.6.1 (2023-06-09)
 
 ### Bug Fixes
 
 * attributeIsDivisibleByAnInteger bad check if value IsNull and IsUnknown ([#58](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/issues/58)) ([7b8fd83](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/7b8fd8311024606d4f76361bf31131feaff74920))
 
-## [1.6.0](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.5.2...v1.6.0) (2023-06-09)
+## 1.6.0 (2023-06-09)
 
 ### Features
 
@@ -47,26 +47,26 @@
 
 * pathExpression missing in attribute NullIfAttributeIsOneOf validator ([#57](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/issues/57)) ([6b0e629](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/6b0e6291635435fcc84715b3a4bd4533621bdf0f))
 
-## [1.5.2](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.5.1...v1.5.2) (2023-06-08)
+## 1.5.2 (2023-06-08)
 
 ### Bug Fixes
 
 * pathExpression for RequireIfAttributeIsOneOf validator ([#53](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/issues/53)) ([2058e4c](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/2058e4c01947a90d0d923968a814aeca4532acbf))
 * pathExpression missing in attributeIsDivisibleByAnInteger validator ([e99edac](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/e99edac0042a7198ee0d30fb1a38c70b307dc006))
 
-## [1.5.1](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.5.0...v1.5.1) (2023-04-25)
+## 1.5.1 (2023-04-25)
 
 ### Bug Fixes
 
 * RequireIfAttributeIsOneOf error message and tests ([f857608](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/f857608557d4b7999ec365eba8744129cd870b8e))
 
-## [1.5.0](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.4.0...v1.5.0) (2023-04-14)
+## 1.5.0 (2023-04-14)
 
 ### Features
 
 * add string and int64 validator `OneOfWithDescription` ([23b6925](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/23b692537a9220243c2d91e16722755b7b25df25))
 
-## [1.4.0](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.3.1...v1.4.0) (2023-04-07)
+## 1.4.0 (2023-04-07)
 
 ### Features
 
@@ -78,19 +78,19 @@
 * CODE_OF_CONDUCT ([1484d02](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/1484d02b4987051f86bed62645789ee99fbdd509))
 * LICENCE ([1d4c81a](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/1d4c81ac0a8b5f19b5b77cbb9cec9015c6ded3d2))
 
-## [1.3.1](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.3.0...v1.3.1) (2023-03-31)
+## 1.3.1 (2023-03-31)
 
 ### Bug Fixes
 
 * error message and docs for `RequireIfAttributeIsOneOf` ([#42](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/issues/42)) ([b1b3096](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/b1b30966e6fb3fe51177af27dd7994b2669381ab))
 
-## [1.3.0](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.2.1...v1.3.0) (2023-03-31)
+## 1.3.0 (2023-03-31)
 
 ### Features
 
 * add new validator `require_if_attribute_is_one_of` ([b685181](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/b685181ca9f1f35bf14dbd7851f9a69bbe6040e8))
 
-## [1.2.1](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.2.0...v1.2.1) (2023-03-29)
+## 1.2.1 (2023-03-29)
 
 ### Bug Fixes
 
@@ -107,20 +107,20 @@
 * **docs:** Add Favicon and branding orange ([d6a7005](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/d6a7005a325fe22a6b34f254b7cdd645d59233cf))
 * remove list IsURN validator ([10472f7](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/10472f785d1a34c56c83d92936c8cbe6e6752889))
 
-## [1.2.0](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.1.1...v1.2.0) (2023-03-20)
+## 1.2.0 (2023-03-20)
 
 ### Features
 
 * Add `IsMacAddress` String validator ([4a82bc8](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/4a82bc81df65ea7d5a7fae1da7af4217405751f9))
 
-## [1.1.1](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.1.0...v1.1.1) (2023-03-20)
+## 1.1.1 (2023-03-20)
 
 ### Miscellaneous
 
 * **docs:** Add docs ValueStringsAre in list/set/map ([033ee2e](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/033ee2e0abce511baca5697fc9c7b4a4bdabc6c4))
 * remove list IsURN validator ([033ee2e](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/commit/033ee2e0abce511baca5697fc9c7b4a4bdabc6c4))
 
-## [1.1.0](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/compare/v1.0.0...v1.1.0) (2023-03-17)
+## 1.1.0 (2023-03-17)
 
 ### Features
 
