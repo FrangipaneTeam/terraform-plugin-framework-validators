@@ -11,6 +11,9 @@
     <a href="https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/issues">
       <img alt="Issues" src="https://img.shields.io/github/issues/FrangipaneTeam/terraform-plugin-framework-validators?style=for-the-badge&logo=bilibili&color=F5E0DC&logoColor=D9E0EE&labelColor=302D41" />
     </a>
+    <a href="https://goreportcard.com/report/github.com/FrangipaneTeam/terraform-plugin-framework-validators">
+      <img alt="GoReport" src="https://goreportcard.com/badge/github.com/FrangipaneTeam/terraform-plugin-framework-validators?style=for-the-badge" />
+    </a>
 </div>
 
 # terraform-plugin-framework-validators
@@ -26,5 +29,9 @@ go get github.com/FrangipaneTeam/terraform-plugin-framework-validators@latest
 ```
 
 ## Documentation
+
+The documentation for the validators can be found [here](https://github.frangipane.io/terraform/validators/getting-started/).
+
+## Maintainers
 
 This repository is maintained by the [Frangipane Team](https://github.com/FrangipaneTeam)
