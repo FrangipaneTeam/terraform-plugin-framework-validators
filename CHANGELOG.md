@@ -1,5 +1,9 @@
 ## 1.7.0 (Unreleased)
 
+### :dependabot: **Dependencies**
+
+* deps: bumps github.com/hashicorp/terraform-plugin-go from 0.16.0 to 0.18.0 ([GH-75](https://github.com/orange-cloudavenue/terraform-provider-cloudavenue/issues/75))
+
 ## 1.6.4 (2023-06-20)
 
 ### Bug Fixes
