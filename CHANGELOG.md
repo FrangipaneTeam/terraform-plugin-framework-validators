@@ -1,5 +1,9 @@
 ## 1.7.0 (Unreleased)
 
+### :rocket: **New Features**
+
+* `stringvalidator/PrefixContains` - Check if the string contains the prefix. ([GH-76](https://github.com/orange-cloudavenue/terraform-provider-cloudavenue/issues/76))
+
 ### :dependabot: **Dependencies**
 
 * deps: bumps github.com/hashicorp/terraform-plugin-framework from 1.3.1 to 1.3.2 ([GH-74](https://github.com/orange-cloudavenue/terraform-provider-cloudavenue/issues/74))
