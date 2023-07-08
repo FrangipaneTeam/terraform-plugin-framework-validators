@@ -1,0 +1,3 @@
+```release-note:feature
+`stringvalidator/PrefixContains` - Check if the string contains the prefix.
+```
