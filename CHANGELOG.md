@@ -1,4 +1,5 @@
-## 1.7.0 (Unreleased)
+## 1.8.0 (Unreleased)
+## 1.7.0 (July 10, 2023)
 
 ### :rocket: **New Features**
 
