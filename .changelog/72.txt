@@ -1,0 +1,6 @@
+```release-note:enhancement
+`null_if_attribute_is_one_of` - Improve documentation generation.
+```
+```release-note:enhancement
+`require_if_attribute_is_one_of` - Improve documentation generation.
+```

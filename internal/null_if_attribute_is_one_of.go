@@ -3,6 +3,7 @@ package internal
 import (
 	"context"
 	"fmt"
+	"strings"
 
 	"github.com/hashicorp/terraform-plugin-framework/attr"
 	"github.com/hashicorp/terraform-plugin-framework/diag"
@@ -45,25 +46,42 @@ type NullIfAttributeIsOneOfResponse struct {
 func (av NullIfAttributeIsOneOf) Description(_ context.Context) string {
 	var expectedValueDescritpion string
 	for i, expectedValue := range av.ExceptedValues {
+		// remove the quotes around the string
 		if i == len(av.ExceptedValues)-1 {
 			expectedValueDescritpion += expectedValue.String()
 			break
 		}
 		expectedValueDescritpion += fmt.Sprintf("%s, ", expectedValue.String())
 	}
-	return fmt.Sprintf("If %s attribute is set and the value is one of %s, this attribute is NULL", av.PathExpression, expectedValueDescritpion)
+
+	if len(av.ExceptedValues) == 1 {
+		return fmt.Sprintf("If %s attribute is set and the value is %s this attribute is NULL", av.PathExpression, expectedValueDescritpion)
+	}
+	return fmt.Sprintf("If %s attribute is set and the value is one of %s this attribute is NULL", av.PathExpression, expectedValueDescritpion)
 }
 
 func (av NullIfAttributeIsOneOf) MarkdownDescription(_ context.Context) string {
 	var expectedValueDescritpion string
 	for i, expectedValue := range av.ExceptedValues {
-		if i == len(av.ExceptedValues)-1 {
-			expectedValueDescritpion += fmt.Sprintf("`%s`", expectedValue)
-			break
+		// remove the quotes around the string
+		v := strings.Trim(expectedValue.String(), "\"")
+
+		switch i {
+		case len(av.ExceptedValues) - 1:
+			expectedValueDescritpion += fmt.Sprintf("`%s`", v)
+		case len(av.ExceptedValues) - 2:
+			expectedValueDescritpion += fmt.Sprintf("`%s` or ", v)
+		default:
+			expectedValueDescritpion += fmt.Sprintf("`%s`, ", v)
 		}
-		expectedValueDescritpion += fmt.Sprintf("`%s`, ", expectedValue)
 	}
-	return fmt.Sprintf("If %s attribute is set and the value is one of %s, this attribute is NULL", av.PathExpression, expectedValueDescritpion)
+
+	switch len(av.ExceptedValues) {
+	case 1:
+		return fmt.Sprintf("If the value of [`%s`](#%s) attribute is %s this attribute is **NULL**", av.PathExpression, av.PathExpression, expectedValueDescritpion)
+	default:
+		return fmt.Sprintf("If the value of [`%s`](#%s) attribute is one of %s this attribute is **NULL**", av.PathExpression, av.PathExpression, expectedValueDescritpion)
+	}
 }
 
 func (av NullIfAttributeIsOneOf) Validate(ctx context.Context, req NullIfAttributeIsOneOfRequest, res *NullIfAttributeIsOneOfResponse) {

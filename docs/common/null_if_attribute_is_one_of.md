@@ -26,3 +26,7 @@ func (r *xResource) Schema(ctx context.Context, _ resource.SchemaRequest, resp *
                 },
             },
 ```
+
+## Example of generated documentation
+
+If the value of [`network_type`](#network_type) attribute is `private` this attribute is **NUL**.

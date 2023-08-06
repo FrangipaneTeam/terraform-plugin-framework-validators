@@ -58,7 +58,7 @@ func TestRequireIfAttributeIsOneOfValidator(t *testing.T) {
 				types.StringValue("excepted value"),
 			},
 			expError:        true,
-			expErrorMessage: "If foo attribute is set and the value is one of \"excepted value\", this attribute is REQUIRED",
+			expErrorMessage: "If foo attribute is set and the value is \"excepted value\" this attribute is REQUIRED",
 		},
 		"extendedString": {
 			req: internal.RequireIfAttributeIsOneOfRequest{
@@ -124,7 +124,7 @@ func TestRequireIfAttributeIsOneOfValidator(t *testing.T) {
 				types.StringValue("bar1 excepted value"),
 			},
 			expError:        true,
-			expErrorMessage: "If foobar[0].bar1 attribute is set and the value is one of \"bar1 excepted value\", this attribute is REQUIRED",
+			expErrorMessage: "If foobar[0].bar1 attribute is set and the value is \"bar1 excepted value\" this attribute is REQUIRED",
 		},
 		"baseInt64": {
 			req: internal.RequireIfAttributeIsOneOfRequest{
@@ -155,7 +155,7 @@ func TestRequireIfAttributeIsOneOfValidator(t *testing.T) {
 				types.Int64Value(10),
 			},
 			expError:        true,
-			expErrorMessage: "If foo attribute is set and the value is one of 10, this attribute is REQUIRED",
+			expErrorMessage: "If foo attribute is set and the value is 10 this attribute is REQUIRED",
 		},
 		"baseBool": {
 			req: internal.RequireIfAttributeIsOneOfRequest{
@@ -186,7 +186,7 @@ func TestRequireIfAttributeIsOneOfValidator(t *testing.T) {
 				types.BoolValue(true),
 			},
 			expError:        true,
-			expErrorMessage: "If foo attribute is set and the value is one of true, this attribute is REQUIRED",
+			expErrorMessage: "If foo attribute is set and the value is true this attribute is REQUIRED",
 		},
 		"path-attribute-is-null": {
 			req: internal.RequireIfAttributeIsOneOfRequest{
@@ -327,7 +327,7 @@ func TestRequireIfAttributeIsOneOfValidator(t *testing.T) {
 					fmt.Sprintf("Invalid configuration for attribute %s", test.req.Path),
 					test.expErrorMessage,
 				)) {
-					t.Fatal("expected error(s), got none. Error message is : ", res.Diagnostics.Errors())
+					t.Fatal(fmt.Sprintf("expected error(s) to contain (%s), got none. Error message is : (%s)", test.expErrorMessage, res.Diagnostics.Errors())) //nolint:gosimple
 				}
 			}
 
