@@ -7,19 +7,6 @@ import (
 )
 
 /*
-IsValidUUID
-returns a validator which ensures that the configured attribute
-value is a valid (v4) UUID.
-
-Null (unconfigured) and unknown (known after apply) values are skipped.
-
-Deprecated: Use IsUUID() instead.
-*/
-func IsValidUUID() validator.String {
-	return IsUUID()
-}
-
-/*
 IsUUID
 returns a validator which ensures that the configured attribute
 value is a valid (v4) UUID.

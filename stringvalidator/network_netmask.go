@@ -7,20 +7,6 @@ import (
 )
 
 /*
-IsValidNetmask
-
-returns a validator which ensures that the configured attribute
-value is a valid Netmask.
-
-Null (unconfigured) and unknown (known after apply) values are skipped.
-
-	DEPRECATED: Use IsNetmask() instead.
-*/
-func IsValidNetmask() validator.String {
-	return IsValidNetmask()
-}
-
-/*
 IsNetmask
 
 returns a validator which ensures that the configured attribute
