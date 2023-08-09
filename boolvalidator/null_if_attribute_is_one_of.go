@@ -10,7 +10,7 @@ import (
 
 // NullIfAttributeIsOneOf checks if the path.Path attribute contains
 // one of the exceptedValue attr.Value.
-func NullIfAttributeIsOneOf(path path.Expression, exceptedValue []attr.Value) validator.Int64 {
+func NullIfAttributeIsOneOf(path path.Expression, exceptedValue []attr.Value) validator.Bool {
 	return internal.NullIfAttributeIsOneOf{
 		PathExpression: path,
 		ExceptedValues: exceptedValue,
