@@ -1,5 +1,10 @@
 ## 1.8.0 (Unreleased)
 
+### :tada: **Improvements**
+
+* `null_if_attribute_is_one_of` - Improve documentation generation. ([GH-72](https://github.com/orange-cloudavenue/terraform-provider-cloudavenue/issues/72))
+* `require_if_attribute_is_one_of` - Improve documentation generation. ([GH-72](https://github.com/orange-cloudavenue/terraform-provider-cloudavenue/issues/72))
+
 ### :dependabot: **Dependencies**
 
 * deps: bumps github.com/hashicorp/terraform-plugin-framework from 1.3.2 to 1.3.3 ([GH-79](https://github.com/orange-cloudavenue/terraform-provider-cloudavenue/issues/79))
