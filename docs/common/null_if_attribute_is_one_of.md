@@ -21,7 +21,7 @@ func (r *xResource) Schema(ctx context.Context, _ resource.SchemaRequest, resp *
             "enabled": schema.BoolAttribute{
                 Optional:            true,
                 MarkdownDescription: "Enable ...",
-                Validators: []validator.String{
+                Validators: []validator.Bool{
                     fboolvalidator.NullIfAttributeIsOneOf(path.MatchRoot("network_type"),[]attr.Value{types.StringValue("private")})
                 },
             },
