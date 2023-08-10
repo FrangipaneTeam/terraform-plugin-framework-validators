@@ -1,0 +1,3 @@
+```release-note:breaking-change
+Remove OLD Name of validators `IsValidIP`, `IsValidUUID`, `IsValidNetmask` and `IsValidUUID`
+```

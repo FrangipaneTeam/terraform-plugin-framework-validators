@@ -7,19 +7,6 @@ import (
 )
 
 /*
-IsValidURN
-returns a validator which ensures that the configured attribute
-value is a valid URN.
-
-Null (unconfigured) and unknown (known after apply) values are skipped.
-
-Deprecated: Use IsURN() instead.
-*/
-func IsValidURN() validator.String {
-	return IsURN()
-}
-
-/*
 IsURN
 returns a validator which ensures that the configured attribute
 value is a valid URN.

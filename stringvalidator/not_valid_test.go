@@ -35,7 +35,7 @@ func TestNotValidator(t *testing.T) {
 				ConfigValue: test.val,
 			}
 			response := validator.StringResponse{}
-			stringvalidator.Not(stringvalidator.IsValidIP()).ValidateString(context.TODO(), request, &response)
+			stringvalidator.Not(stringvalidator.IsIP()).ValidateString(context.TODO(), request, &response)
 
 			if !response.Diagnostics.HasError() && test.expectError {
 				t.Fatal("expected error, got no error")
