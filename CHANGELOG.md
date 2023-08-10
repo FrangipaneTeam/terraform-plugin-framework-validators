@@ -1,4 +1,7 @@
 ## 1.8.0 (Unreleased)
+### :rotating_light: **Breaking Changes**
+
+* Remove OLD Name of validators `IsValidIP`, `IsValidUUID`, `IsValidNetmask` and `IsValidUUID` ([GH-81](https://github.com/orange-cloudavenue/terraform-provider-cloudavenue/issues/81))
 
 ### :tada: **Improvements**
 
