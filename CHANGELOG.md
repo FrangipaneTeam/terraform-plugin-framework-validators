@@ -12,6 +12,7 @@
 
 * deps: bumps github.com/hashicorp/terraform-plugin-framework from 1.3.2 to 1.3.3 ([GH-79](https://github.com/orange-cloudavenue/terraform-provider-cloudavenue/issues/79))
 * deps: bumps github.com/hashicorp/terraform-plugin-framework from 1.3.3 to 1.3.4 ([GH-86](https://github.com/orange-cloudavenue/terraform-provider-cloudavenue/issues/86))
+* deps: bumps github.com/hashicorp/terraform-plugin-framework-validators from 0.10.0 to 0.11.0 ([GH-87](https://github.com/orange-cloudavenue/terraform-provider-cloudavenue/issues/87))
 
 ## 1.7.0 (July 10, 2023)
 
