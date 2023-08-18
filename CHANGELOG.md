@@ -3,6 +3,11 @@
 
 * Remove OLD Name of validators `IsValidIP`, `IsValidUUID`, `IsValidNetmask` and `IsValidUUID` ([GH-81](https://github.com/orange-cloudavenue/terraform-provider-cloudavenue/issues/81))
 
+### :rocket: **New Features**
+
+* `NullIfAttributeIsSet` - New validator that allows you to validate that an attribute is null if another attribute is set. This is available for all types of attributes. ([GH-83](https://github.com/orange-cloudavenue/terraform-provider-cloudavenue/issues/83))
+* `RequireIfAttributeIsSet` - New validator that allows you to validate that an attribute is required if another attribute is set. This is available for all types of attributes. ([GH-84](https://github.com/orange-cloudavenue/terraform-provider-cloudavenue/issues/84))
+
 ### :tada: **Improvements**
 
 * `null_if_attribute_is_one_of` - Improve documentation generation. ([GH-72](https://github.com/orange-cloudavenue/terraform-provider-cloudavenue/issues/72))
