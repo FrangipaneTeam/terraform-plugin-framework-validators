@@ -1,0 +1,3 @@
+```release-note:feature
+`NullIfAttributeIsSet` - New validator that allows you to validate that a attribute is null if another attribute is set. This is available for all types of attributes.
+```

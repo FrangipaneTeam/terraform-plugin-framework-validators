@@ -1,8 +1,9 @@
-# `NullIfAttributeIsOneOf`
+# `NullIfAttributeIsSet`
 
-!!! quote inline end "Released in v1.6.0"
+!!! quote inline end "Released in v1.8.0"
 
-This validator is used to verify the attribute value is null if another attribute is one of the given values.
+This validator is used to verify the attribute value is null if another attribute is set.
+Set could mean either the attribute is present in the configuration.
 
 ## How to use it
 
@@ -22,11 +23,11 @@ func (r *xResource) Schema(ctx context.Context, _ resource.SchemaRequest, resp *
                 Optional:            true,
                 MarkdownDescription: "Enable ...",
                 Validators: []validator.Bool{
-                    fboolvalidator.NullIfAttributeIsOneOf(path.MatchRoot("network_type"),[]attr.Value{types.StringValue("private")})
+                    fboolvalidator.NullIfAttributeIsSet(path.MatchRoot("network_type"))
                 },
             },
 ```
 
 ## Example of generated documentation
 
-If the value of [`network_type`](#network_type) attribute is `private` this attribute is **NULL**.
+If the value of [`network_type`](#network_type) attribute is set this attribute is **NULL**.
