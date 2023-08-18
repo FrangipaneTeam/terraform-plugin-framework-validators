@@ -1,0 +1,3 @@
+```release-note:feature
+`RequireIfAttributeIsSet` - New validator that allows you to validate that an attribute is required if another attribute is set. This is available for all types of attributes.
+```
