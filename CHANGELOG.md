@@ -7,11 +7,15 @@
 
 * `NullIfAttributeIsSet` - New validator that allows you to validate that an attribute is null if another attribute is set. This is available for all types of attributes. ([GH-83](https://github.com/orange-cloudavenue/terraform-provider-cloudavenue/issues/83))
 * `RequireIfAttributeIsSet` - New validator that allows you to validate that an attribute is required if another attribute is set. This is available for all types of attributes. ([GH-84](https://github.com/orange-cloudavenue/terraform-provider-cloudavenue/issues/84))
+* `stringvalidator/IsNetwork` - This is a new generic validator that checks if the value is a valid network format. Currently there is 4 formats that are supported: `IPV4`, `IPV4WithCIDR`, `IPV4WithNetmask` and `RFC1918`. ([GH-85](https://github.com/orange-cloudavenue/terraform-provider-cloudavenue/issues/85))
 
 ### :tada: **Improvements**
 
 * `null_if_attribute_is_one_of` - Improve documentation generation. ([GH-72](https://github.com/orange-cloudavenue/terraform-provider-cloudavenue/issues/72))
 * `require_if_attribute_is_one_of` - Improve documentation generation. ([GH-72](https://github.com/orange-cloudavenue/terraform-provider-cloudavenue/issues/72))
+### :information_source: **Notes**
+
+* `stringvalidator/IsIP` - This validator is now deprecated and will be removed in the release [**v1.11**](https://github.com/FrangipaneTeam/terraform-plugin-framework-validators/milestone/4). Please use `stringvalidator/IsNetwork` instead. ([GH-85](https://github.com/orange-cloudavenue/terraform-provider-cloudavenue/issues/85))
 
 ### :dependabot: **Dependencies**
 
