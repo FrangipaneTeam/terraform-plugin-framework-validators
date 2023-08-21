@@ -1,6 +1,7 @@
 # `IsIP`
 
-!!! quote inline end "Released in v1.1.0"
+!!! danger inline end "Deprecated"
+    Use [IsNetwork](./isnetwork.md) instead.
 
 This validator is used to check if the string is a valid IP address.
 
