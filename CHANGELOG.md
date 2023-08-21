@@ -1,4 +1,5 @@
-## 1.8.0 (Unreleased)
+## 1.9.0 (Unreleased)
+## 1.8.0 (August 21, 2023)
 ### :rotating_light: **Breaking Changes**
 
 * Remove OLD Name of validators `IsValidIP`, `IsValidUUID`, `IsValidNetmask` and `IsValidUUID` ([GH-81](https://github.com/orange-cloudavenue/terraform-provider-cloudavenue/issues/81))
