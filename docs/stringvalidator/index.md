@@ -21,7 +21,8 @@ import (
 
 ### Network
 
-- [`IsIP`](isip.md) - This validator is used to check if the string is a valid IP address.
+- [`IsNetwork`](isnetwork.md) - This validator is a generic validator for checking if the string is a valid network format.
+- [`IsIP`](isip.md) - (**DEPRECATED**) This validator is used to check if the string is a valid IP address.
 - [`IsNetmask`](isnetmask.md) - This validator is used to check if the string is a valid netmask.
 - [`IsMacAddress`](ismacaddress.md) - This validator is used to check if the string is a valid MAC address.
 
