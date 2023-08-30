@@ -1,4 +1,9 @@
 ## 1.9.0 (Unreleased)
+
+### :dependabot: **Dependencies**
+
+* deps: bumps github.com/hashicorp/terraform-plugin-framework from 1.3.4 to 1.3.5 ([GH-97](https://github.com/orange-cloudavenue/terraform-provider-cloudavenue/issues/97))
+
 ## 1.8.0 (August 21, 2023)
 ### :rotating_light: **Breaking Changes**
 
