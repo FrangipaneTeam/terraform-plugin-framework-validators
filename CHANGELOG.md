@@ -1,4 +1,5 @@
 ## 1.9.0 (Unreleased)
+## 1.8.1 (October 12, 2023)
 
 ### :dependabot: **Dependencies**
 
