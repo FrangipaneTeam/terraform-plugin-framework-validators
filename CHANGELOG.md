@@ -4,6 +4,7 @@
 
 * deps: bumps github.com/hashicorp/terraform-plugin-framework from 1.3.4 to 1.3.5 ([GH-97](https://github.com/orange-cloudavenue/terraform-provider-cloudavenue/issues/97))
 * deps: bumps github.com/hashicorp/terraform-plugin-framework from 1.3.5 to 1.4.0 ([GH-101](https://github.com/orange-cloudavenue/terraform-provider-cloudavenue/issues/101))
+* deps: bumps github.com/hashicorp/terraform-plugin-framework from 1.4.0 to 1.4.1 ([GH-102](https://github.com/orange-cloudavenue/terraform-provider-cloudavenue/issues/102))
 * deps: bumps github.com/hashicorp/terraform-plugin-framework-validators from 0.10.0 to 0.11.0 ([GH-96](https://github.com/orange-cloudavenue/terraform-provider-cloudavenue/issues/96))
 * deps: bumps github.com/hashicorp/terraform-plugin-go from 0.18.0 to 0.19.0 ([GH-100](https://github.com/orange-cloudavenue/terraform-provider-cloudavenue/issues/100))
 
