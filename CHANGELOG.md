@@ -1,4 +1,9 @@
 ## 1.9.0 (Unreleased)
+
+### :dependabot: **Dependencies**
+
+* deps: bumps github.com/hashicorp/terraform-plugin-framework from 1.4.1 to 1.4.2 (GH-103)
+
 ## 1.8.1 (October 12, 2023)
 
 ### :dependabot: **Dependencies**
