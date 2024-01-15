@@ -3,9 +3,9 @@ module github.com/FrangipaneTeam/terraform-plugin-framework-validators
 go 1.20
 
 require (
-	github.com/hashicorp/terraform-plugin-framework v1.4.2
+	github.com/hashicorp/terraform-plugin-framework v1.5.0
 	github.com/hashicorp/terraform-plugin-framework-validators v0.12.0
-	github.com/hashicorp/terraform-plugin-go v0.19.1
+	github.com/hashicorp/terraform-plugin-go v0.20.0
 )
 
 require (
