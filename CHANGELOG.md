@@ -1,4 +1,5 @@
-## 1.9.0 (Unreleased)
+## 1.10.0 (Unreleased)
+## 1.9.0 (December 20, 2024)
 
 ### :dependabot: **Dependencies**
 
