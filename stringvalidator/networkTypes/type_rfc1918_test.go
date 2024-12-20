@@ -73,7 +73,7 @@ func TestValidRFC1918Validator(t *testing.T) {
 	}
 }
 
-// TestValidRFC1918ValidatorDescription
+// TestValidRFC1918ValidatorDescription.
 func TestValidRFC1918ValidatorDescription(t *testing.T) {
 	t.Parallel()
 
@@ -98,7 +98,7 @@ func TestValidRFC1918ValidatorDescription(t *testing.T) {
 	}
 }
 
-// TestValidRFC1918ValidatorMarkdownDescription
+// TestValidRFC1918ValidatorMarkdownDescription.
 func TestValidRFC1918ValidatorMarkdownDescription(t *testing.T) {
 	t.Parallel()
 
