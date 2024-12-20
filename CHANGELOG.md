@@ -4,6 +4,7 @@
 
 * deps: bumps github.com/hashicorp/terraform-plugin-framework from 1.4.1 to 1.4.2 (GH-103)
 * deps: bumps github.com/hashicorp/terraform-plugin-go from 0.19.0 to 0.19.1 (GH-105)
+* deps: bumps github.com/hashicorp/terraform-plugin-go from 0.19.1 to 0.25.0 (GH-111)
 
 ## 1.8.1 (October 12, 2023)
 
