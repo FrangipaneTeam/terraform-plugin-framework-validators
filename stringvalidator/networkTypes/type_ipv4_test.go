@@ -63,7 +63,7 @@ func TestValidIPV4Validator(t *testing.T) {
 	}
 }
 
-// TestValidIPValidatorDescription
+// TestValidIPValidatorDescription.
 func TestValidIPV4ValidatorDescription(t *testing.T) {
 	t.Parallel()
 
@@ -88,7 +88,7 @@ func TestValidIPV4ValidatorDescription(t *testing.T) {
 	}
 }
 
-// TestValidIPValidatorMarkdownDescription
+// TestValidIPValidatorMarkdownDescription.
 func TestValidIPV4ValidatorMarkdownDescription(t *testing.T) {
 	t.Parallel()
 

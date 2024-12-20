@@ -75,18 +75,6 @@ func (v OneOfWithDescriptionValidator) MarkdownDescription(_ context.Context) st
 	return fmt.Sprintf("%s %s", oneOfWithDescriptionValidatorDescription, valuesDescription)
 }
 
-func (v OneOfWithDescriptionValidator) valuesDescription(_ context.Context) string {
-	var valuesDescription string
-	for i, value := range v.Values {
-		if i == len(v.Values)-1 {
-			valuesDescription += fmt.Sprintf("%s (%s)", value.Value.String(), value.Description)
-			break
-		}
-		valuesDescription += fmt.Sprintf("%s (%s), ", value.Value.String(), value.Description)
-	}
-	return valuesDescription
-}
-
 func (v OneOfWithDescriptionValidator) Validate(ctx context.Context, req OneOfWithDescriptionValidatorRequest, res *OneOfWithDescriptionValidatorResponse) {
 	// If attribute configuration is not null or unknown, there is nothing else to validate
 	if req.ConfigValue.IsNull() || req.ConfigValue.IsUnknown() || len(v.Values) == 0 {

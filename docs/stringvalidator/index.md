@@ -18,6 +18,7 @@ import (
 - [`NullIfAttributeIsOneOf`](../common/null_if_attribute_is_one_of.md) - This validator is used to verify the attribute value is null if another attribute is one of the given values.
 - [`NullIfAttributeIsSet`](../common/null_if_attribute_is_set.md) - This validator is used to verify the attribute value is null if another attribute is set.
 - [`OneOfWithDescription`](oneofwithdescription.md) - This validator is used to check if the string is one of the given values and format the description and the markdown description.
+- [`OneOfWithDescriptionIfAttributeIsOneOf`](../common/oneofwithdescriptionifattributeisoneof.md) - This validator is used to check if the string is one of the given values if the attribute is one of and format the description and the markdown description.
 
 ### Network
 

@@ -79,7 +79,7 @@ func TestValidIPV4WithNetmaskValidator(t *testing.T) {
 	}
 }
 
-// TestValidIPV4WithNetmaskValidatorDescription
+// TestValidIPV4WithNetmaskValidatorDescription.
 func TestValidIPV4WithNetmaskValidatorDescription(t *testing.T) {
 	t.Parallel()
 
@@ -104,7 +104,7 @@ func TestValidIPV4WithNetmaskValidatorDescription(t *testing.T) {
 	}
 }
 
-// TestValidIPV4WithNetmaskValidatorMarkdownDescription
+// TestValidIPV4WithNetmaskValidatorMarkdownDescription.
 func TestValidIPV4WithNetmaskValidatorMarkdownDescription(t *testing.T) {
 	t.Parallel()
 

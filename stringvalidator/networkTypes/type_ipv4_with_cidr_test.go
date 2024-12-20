@@ -79,7 +79,7 @@ func TestValidIPV4WithCIDRValidator(t *testing.T) {
 	}
 }
 
-// TestValidIPV4WithCIDRValidatorDescription
+// TestValidIPV4WithCIDRValidatorDescription.
 func TestValidIPV4WithCIDRValidatorDescription(t *testing.T) {
 	t.Parallel()
 
@@ -104,7 +104,7 @@ func TestValidIPV4WithCIDRValidatorDescription(t *testing.T) {
 	}
 }
 
-// TestValidIPV4WithCIDRValidatorMarkdownDescription
+// TestValidIPV4WithCIDRValidatorMarkdownDescription.
 func TestValidIPV4WithCIDRValidatorMarkdownDescription(t *testing.T) {
 	t.Parallel()
 
